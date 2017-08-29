@@ -1,0 +1,32 @@
+﻿{
+    "songDetails":[
+        {"songOrder":"1","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"2","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"3","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"4","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"5","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"6","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"7","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"8","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"9","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"10","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"},
+        {"songOrder":"11","songName":"第一首","songTitle":"-你会不会突然地出现","songTime":"21:21","artist":"姚海洋"}
+    ],
+
+    "advertisement":[
+        {"imgSrc":"imgRes/ad1.jpg","adHref":"http://www.baidu.com"},
+        {"imgSrc":"imgRes/ad2.jpg","adHref":"http://www.tmall.com"},
+        {"imgSrc":"imgRes/ad3.jpg","adHref":"http://www.jd.com"},
+        {"imgSrc":"imgRes/ad4.jpg","adHref":"http://www.vip.com"}
+    ],
+
+    "guessYouLike":[
+        {"imgSrc":"imgRes/shili3.jpg","titleInfo":"躲","userName":"姚海洋"},
+        {"imgSrc":"imgRes/shili3.jpg","titleInfo":"躲得过对酒当歌的夜，躲不过四下无人的街","userName":"姚海洋"},
+        {"imgSrc":"imgRes/shili3.jpg","titleInfo":"躲得过对酒当歌的夜，躲不过四下无人的街","userName":"姚海洋"},
+        {"imgSrc":"imgRes/shili3.jpg","titleInfo":"躲得过对酒当歌的夜，躲不过四下无人的街","userName":"姚海洋"},
+        {"imgSrc":"imgRes/shili3.jpg","titleInfo":"躲得过对酒当歌的夜，躲不过四下无人的街","userName":"姚海洋"},
+        {"imgSrc":"imgRes/shili3.jpg","titleInfo":"躲得过对酒当歌的夜，躲不过四下无人的街","userName":"姚海洋"},
+        {"imgSrc":"imgRes/shili3.jpg","titleInfo":"躲得过对酒当歌的夜，躲不过四下无人的街","userName":"姚海洋"}
+    ]
+}

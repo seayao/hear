@@ -1,0 +1,299 @@
+summary:focus{
+    outline: none;
+}
+
+.nav .two{
+    background:none;
+}
+
+.nav .two a{
+    background:none;
+}
+
+.songDetailsContent{
+    width:980px;
+    min-height: 800px;
+    margin: 0 auto;
+    border-left: solid 1px #d3d3d3;
+    border-right: solid 1px #d3d3d3;
+    background: url("../frameImg/wrap4.png") repeat-y center 0;
+}
+
+.songDetailsContent:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.topListContentRight{
+    width:709px;
+    float: left;
+}
+
+.songDetailsInfo{
+    width: 640px;
+    height: auto;
+}
+
+.songDetailsInfo:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.songDetailsInfoLeft{
+    width: 200px;
+    height: 200px;
+    margin: 0 -220px 0 0;
+    display: inline;
+    padding: 3px;
+    float: left;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.songDetailsInfoLeft img{
+    width: 200px;
+    height: 200px;
+}
+
+.songDetailsInfoRight{
+    float: right;
+    width: 100%;
+}
+
+.songDetailsInfoRightWrap{
+    margin-left: 230px;
+}
+
+.songDetailsInfoRightWrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.songDetailsInfoRightTitle{
+    width: 100%;
+    position: relative;
+    margin: 0 0 12px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.songDetailsInfoRightTitle .songFrom{
+    width: 54px;
+    height: 24px;
+    display: inline-block;
+    background: url("../frameImg/icon_song.png") no-repeat;
+    float: left;
+    margin-right: 10px;
+}
+
+.songDetailsInfoRightTitle h2{
+    width:90%;
+    display: inline-block;
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.songDetailsInfoRightTitle .artistShow{
+    /*display: inline-block;*/
+    font-size: 14px;
+    color: #333;
+}
+
+.songDetailsInfoRightUser{
+    margin: 0 0 20px;
+    line-height: 35px;
+}
+
+.songDetailsInfoRightUser img{
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.songDetailsInfoRightUser .userName{
+    min-width: 30px;
+    height: 35px;
+    display: inline-block;
+}
+
+.songDetailsInfoRightUser .userName a{
+    color: #0c73c2;
+}
+
+.songDetailsInfoRightUser .userName a:hover{
+    text-decoration: underline;
+}
+
+.songDetailsInfoRightUser .createTime{
+    margin-left: 15px;
+    color: #999;
+}
+
+.topListInfoRightBtn{
+    width: 420px;
+    height: 31px;
+    margin-bottom: 25px;
+}
+
+.songDetailsInfoRightLabel{
+    margin: 25px 0 5px;
+    line-height: 22px;
+}
+
+.songDetailsInfoRightLabel b{
+    float: left;
+    font-weight: normal;
+    color: #666;
+}
+
+.songDetailsInfoRightLabel a{
+    display: inline-block;
+    min-width: 40px;
+    padding: 0 5px;
+    height: 22px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #c7edcc;
+    border-radius: 10px;
+    color: #555;
+    text-align: center;
+}
+
+.songDetailsInfoRightLabel a:hover{
+    background: #19a15f;
+    color: #fff;
+}
+
+.songDetailsMsg{
+    min-height: 20px;
+    margin-top: 4px;
+    line-height: 18px;
+    color: #666;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.topListSong_list .topOne .rank{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.topListSong_list .rank .topOneInfo .tableTxt{
+    max-width: 73%;
+}
+
+.topListSong_list .topOne .rank .tablePlay{
+    width: 17px;
+    height: 17px;
+    float: left;
+    margin: 0 8px 0 0;
+    background: url("../frameImg/table.png") no-repeat;
+    background-position: 0 -103px;
+    cursor: pointer;
+}
+
+.topListSong_list .topOne .rank .tablePlay:hover{
+    background-position: -20px -128px;
+}
+
+.topListSong_list .topOne .rank .topOneInfo{
+    margin: 0 20px 0 0;
+}
+
+.songDetailsContentLeft{
+    width: 270px;
+    float: right;
+}
+
+.songDetailsLeftWrap{
+    margin-top: 40px;
+    padding: 0 40px 40px 30px;
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.songDetailsLeftWrap ul:nth-of-type(1) img{
+    width: 200px;
+    height: 220px;
+    display:block;
+    margin: 0 auto;
+}
+
+.songDetailsLeftWrap h3{
+    padding-bottom: 10px;
+}
+
+.songDetailsLeftWrap h3{
+    font-size: 12px;
+}
+
+.songDetailsLeftWrap h3:nth-of-type(2){
+    width:200px;
+    margin-top: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.guessList li{
+    width: 200px;
+    height: 50px;
+    margin-bottom: 15px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.guessList li:hover{
+    background: #eaeaea;
+}
+
+.guessList li:nth-of-type(1){
+    margin-top: 20px;
+}
+
+.guessList li img{
+    width: 50px;
+    height: 50px;
+}
+
+.guessList li p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.songDetailsLeftWrap .guessHead{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: -60px;
+}
+
+.songDetailsLeftWrap .guessInfo{
+    margin-left: 60px;
+}
+
+.songDetailsLeftWrap .guessTitle{
+    font-size: 14px;
+    color: #000;
+}
+
+.songDetailsLeftWrap .guessUser{
+    font-size: 12px;
+    color: #666;
+}
+

@@ -1,0 +1,221 @@
+<div class="banner">
+    <div class="bannerBefore"></div>
+    <div class="bannerAfter"></div>
+    <div class="bannerBody">
+        <!--bannerLeft：轮播图-->
+        <div class="bannerLeft">
+            <div>
+                <!--<div class="bannerShow" ng-repeat="v in bannerValue track by $index">-->
+                    <!--<img ng-src="{{v.imgSrc}}" alt="加载失败">-->
+                <!--</div>-->
+                <div class="bannerShow">
+                    <img src="imgRes/banner1.jpg" alt="加载失败">
+                </div>
+                <div class="bannerShow">
+                    <img src="imgRes/banner2.jpg" alt="加载失败">
+                </div>
+                <div class="bannerShow">
+                    <img src="imgRes/banner3.jpg" alt="加载失败">
+                </div>
+                <div class="bannerShow">
+                    <img src="imgRes/banner4.jpg" alt="加载失败">
+                </div>
+                <div class="bannerShow">
+                    <img src="imgRes/banner5.jpg" alt="加载失败">
+                </div>
+            </div>
+            <div class="bannerIndexAll">
+                <ul>
+                    <li class="bannerIndex">1</li>
+                    <li class="bannerIndex">2</li>
+                    <li class="bannerIndex">3</li>
+                    <li class="bannerIndex">4</li>
+                    <li class="bannerIndex indexBg">5</li>
+                </ul>
+            </div>
+        </div>
+        <!--bannerRight：下载客户端-->
+        <div class="bannerRight">
+            <a class="clientDownload" href="javascript:;" title="下载客户端"></a>
+        </div>
+
+    </div>
+</div> <!-- banner of end -->
+<div class="content">
+    <div class="left">
+        <div class="hotRecommend">
+            <span class="hotRecommendIco"></span>
+            <span class="hotRecommendTitle">热门推荐</span>
+            <div class="hotMore">
+                <a ui-sref="tabs.songList">更多</a>
+                <span class="hotMoreImg"></span>
+            </div>
+            <hr>
+            <ul class="f-cb">
+                <li ng-repeat="v in hotRecValue track by $index">
+                <div class="imgAction">
+                    <img ng-src="{{v.imgName}}" alt="加载失败" ui-sref="tabs.songDetails({songId:v._id})">
+                    <div class="bottomPlay" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                        <span class="iconPlay" title="播放"></span>
+                        <span class="musicIco" title="听众人数"></span>
+                        <span class="personNum">{{v.listener}}</span>
+                    </div>
+                </div>
+                <p>
+                    <a ui-sref="tabs.songDetails({songId:v._id})">{{v.aWord}}</a>
+                </p>
+               </li>
+            </ul>
+        </div>
+        <!--新碟上架-->
+        <div class="newOnSell">
+            <span class="hotRecommendIco"></span>
+            <span class="hotRecommendTitle">新歌上架</span>
+            <div class="hotMore">
+                <a ui-sref="tabs.newAlbum">更多</a>
+                <span class="hotMoreImg"></span>
+            </div>
+            <hr>
+            <div class="newCD f-cb">
+                <ul>
+                    <li ng-repeat="v in newAlbumValue track by $index" ui-sref="tabs.songDetails({songId:v._id})">
+                        <img ng-src="{{v.imgName}}" alt="加载失败">
+                        <p class="newCDName"><a href="javascript:;">{{v.songName}}</a></p>
+                        <p class="newCDSinger"><a href="javascript:;">{{v.artist}}</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--歌单-->
+        <div class="songMenu">
+            <span class="hotRecommendIco"></span>
+            <span class="hotRecommendTitle">榜单</span>
+            <div class="hotMore">
+                <a ui-sref="tabs.topList">更多</a>
+                <span class="hotMoreImg"></span>
+            </div>
+            <hr>
+            <div class="songMenuBody">
+                <div class="songMenuLeft">
+                    <div class="songMenuTop">
+                        <img src="frameImg/songs1.png" alt="加载失败">
+                        <h3 class="songMenuTitle">
+                            <a ui-sref="tabs.topList">音乐新歌榜</a>
+                        </h3>
+                    </div>
+                    <ul>
+                        <li ng-repeat="v in toplistNew track by $index">
+                            <span class="songMenuOrder">{{$index + 1}}</span>
+                            <span class="songMenuName" ui-sref="tabs.songDetails({songId:v._id})">{{v.songName}}</span>
+                            <div class="songMenuPlayTool" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                                <span class="songMenuPlayBtn" title="播放"></span>
+                                <span class="songMenuFavBtn" title="收藏"></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="viewAll"><a ui-sref="tabs.topList">查看全部&gt;</a></div>
+                </div>
+                <div class="songMenuMiddle">
+                    <div class="songMenuTop">
+                        <img src="frameImg/songs2.png" alt="加载失败">
+                        <h3 class="songMenuTitle">
+                            <a ui-sref="tabs.topList({topListType:'toplistSoar'})">音乐飙升榜</a>
+                        </h3>
+                    </div>
+                    <ul>
+                        <li ng-repeat="v in toplistSoar track by $index">
+                            <span class="songMenuOrder">{{$index + 1}}</span>
+                            <span class="songMenuName" ui-sref="tabs.songDetails({songId:v._id})">{{v.songName}}</span>
+                            <div class="songMenuPlayTool" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                                <span class="songMenuPlayBtn" title="播放"></span>
+                                <span class="songMenuFavBtn" title="收藏"></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="viewAll">
+                        <a ui-sref="tabs.topList({topListType:'toplistSoar'})">查看全部&gt;</a>
+                    </p>
+                </div>
+                <div class="songMenuRight">
+                    <div class="songMenuTop">
+                        <img src="frameImg/songs3.png" alt="加载失败">
+                        <h3 class="songMenuTitle">
+                            <a ui-sref="tabs.topList({topListType:'toplistOriginal'})">原创音乐榜</a>
+                        </h3>
+                    </div>
+                    <ul>
+                        <li ng-repeat="v in toplistOriginal track by $index">
+                            <span class="songMenuOrder">{{$index + 1}}</span>
+                            <span class="songMenuName" ui-sref="tabs.songDetails({songId:v._id})">{{v.songName}}</span>
+                            <div class="songMenuPlayTool" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                                <span class="songMenuPlayBtn" title="播放"></span>
+                                <span class="songMenuFavBtn" title="收藏"></span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="viewAll">
+                        <a ui-sref="tabs.topList({topListType:'toplistOriginal'})">查看全部&gt;</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>  <!--left of end -->
+
+    <div class="right">
+        <div class="userLogin">
+            <p class="noteLogin">登录听见音乐平台，可以听见最美妙的声音，并且享受无限收藏的乐趣</p>
+            <a class="userLoginHref" href="javascript:;">用户登录</a>
+        </div>
+        <!--登录成功时的样式-->
+        <div class="userLogSuccess">
+            <div class="userLogSuccessImg">
+                <img class="userLogSuccessHead" src="frameImg/default_avatar.jpg" alt="加载失败">
+            </div>
+            <div class="userLoginMsg">
+                <p class="userLoginAccount"></p>
+                <a class="userLoginHome" href="javascript:;">我的主页</a>
+            </div>
+        </div>
+        <div class="singer">
+            <div class="singerTop">
+                <span>推荐歌手</span>
+                <a ui-sref="tabs.artist">查看全部&gt;</a>
+            </div>
+            <ul class="singerUl">
+                <li ng-repeat="v in recArtistShow track by $index" ui-sref="tabs.artistDetails({artistId:v._id})">
+                    <div class="singerHead">
+                        <img ng-src="{{v.artistImg}}" alt="加载失败">
+                    </div>
+                    <div class="singerText">
+                        <h4 class="singerName">{{v.artistName}}</h4>
+                        <p class="singerDes">{{v.artistDes}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="applyVip">
+            <a ui-sref="tabs.applyVip">注册成为会员，享受更多特权→</a>
+        </div>
+        <div class="hotDj">
+            <div class="singerTop">
+                <span>会员展示</span>
+            </div>
+            <ul>
+                <li class="otherUserItem" ng-repeat="v in hotDJValue track by $index" ui-sref="tabs.userDetails({userId:v._id})">
+                    <div class="djHead">
+                        <img ng-if="v.fileName == null" src="frameImg/default_avatar.jpg" alt="加载失败">
+                        <img ng-if="v.fileName" ng-src="{{v.fileName}}" alt="加载失败">
+                    </div>
+                    <div class="aboutDj">
+                        <p class="djName" ng-if="v.nickname == null"><sup class="djSup"></sup>匿名用户</p>
+                        <p class="djName" ng-if="v.nickname"><sup class="djSup"></sup>{{v.nickname}}</p>
+                        <p class="djDes" ng-if="v.userSign == null">暂无</p>
+                        <p class="djDes" ng-if="v.userSign">{{v.userSign}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> <!-- content of end -->
+<script src="js/recommend.js"></script>
+

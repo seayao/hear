@@ -1,0 +1,286 @@
+/*修改密码框设计*/
+.changePwdBox{
+    z-index: 9999;
+    width: 528px;
+    height: 310px;
+    background: #fff;
+    position: fixed;
+    top: 20%;
+    left: 34%;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 5px #333;
+    display: none;
+}
+
+.changePwdBoxTop{
+    width: 512px;
+    height: 38px;
+    padding-left: 16px;
+    background: #2a2a2a;
+    line-height: 38px;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+}
+
+.changePwdBoxTop .closeChangePwdBox{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: #888;
+    font-size: 22px;
+}
+
+.changePwdBoxTop .closeChangePwdBox:hover{
+    cursor: pointer;
+    color: #fff;
+}
+
+.changePwdBoxMiddle{
+    width: 350px;
+    margin-top: 30px;
+    margin-left: 150px;
+    font-size: 12px;
+}
+
+.oldPwdInput,.newPwdInput,.confirmPwdInput{
+    width: 200px;
+    height: 32px;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+    line-height: 32px;
+    text-indent: 10px;
+    margin-bottom: 15px;
+}
+
+.changePwdDiv{
+    margin-top: 5px;
+}
+
+.changePwdDiv .changePwdBtn{
+    width: 220px;
+    height: 31px;
+    border-radius: 4px;
+    border: none;
+    background: #2e7ecb;
+    color: #fff;
+}
+
+.changePwdBtn:hover{
+    cursor: pointer;
+    background: #448fd6;
+}
+
+.changePwdBtn:active{
+    background: #2e7ecb;
+}
+
+.changePwdBoxBottom{
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    background: #f7f7f7;
+    border-radius: 0 0 4px 4px;
+    line-height: 48px;
+    border-top: 1px solid #c6c6c6;
+}
+
+.changePwdBoxBottom .changePwdTips{
+    display: inline-block;
+    width: 290px;
+    color: #eb7350;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.changePwdBoxBottom .changePwdBoxLogin{
+    padding-left: 19px;
+    color: #0c72c3;
+}
+
+.changePwdBoxBottom .changePwdBoxReg{
+    float: right;
+    padding-right: 19px;
+    color: #999;
+}
+
+/*管理员登录框设计*/
+.loginAdminBox{
+    z-index: 9999;
+    width: 528px;
+    height: 310px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 5px #333;
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 34%;
+}
+
+.loginAdminBoxCover{
+    width: 528px;
+    height: 310px;
+    position: absolute;
+    background:rgba(0,0,0,.6);
+    z-index: 1;
+    user-select: none;
+    display: none;
+}
+
+.loginAdminBoxCover img{
+    width: 50px;
+    height: 50px;
+}
+
+.adminLoading{
+    width: 45%;
+    margin: 110px auto;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.loginAdminBoxTop{
+    width: 512px;
+    height: 38px;
+    padding-left: 16px;
+    background: #2a2a2a;
+    line-height: 38px;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+}
+
+.loginAdminBoxTop .closeAdminBox{
+    color: #888;
+    font-size: 22px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.loginAdminBoxTop .closeAdminBox:hover{
+    cursor: pointer;
+    color: #fff;
+}
+
+.loginAdminBoxMiddle{
+    width: 350px;
+    margin: 35px auto;
+    font-size: 12px;
+    text-align: center;
+}
+
+.adminAccount,.adminPwd{
+    width: 220px;
+    height: 32px;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+    line-height: 32px;
+    text-indent: 10px;
+    margin-bottom: 27px;
+}
+
+.adminLogBtn{
+    width: 220px;
+    height: 31px;
+    border-radius: 4px;
+    border: none;
+    background: #2e7ecb;
+    color: #fff;
+}
+
+.adminLogBtn:hover{
+    cursor: pointer;
+    background: #448fd6;
+}
+
+.adminLogBtn:active{
+    background: #2e7ecb;
+}
+
+.loginAdminBoxBottom{
+    width: 100%;
+    height: 48px;
+    font-size: 12px;
+    background: #f7f7f7;
+    border-radius: 0 0 4px 4px;
+    line-height: 48px;
+    border-top: 1px solid #c6c6c6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.loginAdminBoxBottom .exitAdminBox{
+    padding-left: 19px;
+    color: #0c72c3;
+}
+
+.loginAdminBoxBottom .adminLoginTips{
+    display: inline-block;
+    width:220px;
+    color: #eb7350;
+    margin-left: 15px;
+    text-align: center;
+}
+
+/*管理员登录时，展示此功能选项*/
+.adminCenter .adminCenterIcon{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url("../frameImg/toplist.png") no-repeat;
+    background-position: -18px -60px;
+    vertical-align: middle;
+}
+
+/*音乐开始播放提示*/
+.musicPlayTipDiv{
+    z-index: 9999;
+    width: 152px;
+    height: 50px;
+    position: fixed;
+    right: 14%;
+    bottom: 44px;
+    display: none;
+}
+
+.musicPlayTipIcon {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background: url("../frameImg/playbar.png") no-repeat;
+    background-position: 0 -286px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+
+/*播放模式切换的提示*/
+.musicModeTipDiv{
+    z-index: 9999;
+    width: 78px;
+    height: 32px;
+    position: fixed;
+    right: 17.5%;
+    bottom: 48px;
+    display: none;
+}
+
+.musicModeTipIcon {
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    background: url("../frameImg/playbar.png") no-repeat;
+    background-position: -1px -458px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+}

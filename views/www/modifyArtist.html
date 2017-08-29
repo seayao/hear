@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="css/modifyArtist.css">
+<div class="redLine">
+</div>
+
+<div class="uploadSongContent" ng-controller="modifyArtistController as cBox">
+    <div class="uploadSongContentWrap">
+        <div class="uploadSongTitle">
+            <h3>修改歌手资料</h3>
+        </div>
+        <ul class="adminSettingList f-cb">
+            <li class="memberManageTitle">
+                <em>会员管理</em>
+            </li>
+            <li class="songManageTitle">
+                <em>歌曲管理</em>
+            </li>
+            <li class="artistManageTitle">
+                <em>歌手管理</em>
+            </li>
+            <li class="commentManageTitle">
+                <em>评论管理</em>
+            </li>
+            <li class="problemrManageTitle">
+                <em>问题管理</em>
+            </li>
+            <li class="backMyHomeTitle">
+                <em>我的主页</em>
+            </li>
+        </ul>
+        <div class="userBaseMsg f-cb">
+            <form action="" method="post" id="artistInfoForm">
+                <div class="userBaseMsgLeft">
+                    <div class="uploaderInfo">
+                        <p><label>上传者：</label><span class="uploadUser"></span></p>
+                        <p><label>上传者昵称：</label><span class="uploadNick"></span></p>
+                        <p><label>访问量：</label><span class="artistVisitor"></span></p>
+                        <p><label>上传时间：</label><span class="uploadTime"></span></p>
+                    </div>
+
+                    <div class="artistDiv">
+                        <label><sup>*</sup>歌手姓名：</label><input class="artistInput" type="text" name="artistName" placeholder="不超过10个字符" maxlength="10">
+                    </div>
+
+                    <div class="artistNickDiv">
+                        <label>&nbsp;&nbsp;&nbsp;歌手别称：</label><input class="artistNickInput" type="text" name="artistNick" placeholder="不超过16个字符" maxlength="16">
+                    </div>
+                    <div class="sexDiv">
+                        <label><sup>*</sup>性别：</label>
+                        <label for="male">
+                            <input id="male" type="radio"  name="sex" checked value="1">
+                            男
+                        </label>
+                        <label for="female">
+                            <input id="female" type="radio" name="sex" value="2">
+                            女
+                        </label>
+                    </div>
+                    <!--上传歌手类型二级联动设计-->
+                    <div class="artistTypeDiv">
+                        <div class="targetKindDiv">
+                            <label><sup>*</sup>当前语种：</label>
+                            <input class="bigType" name="bigType" type="text" readonly>
+                            <input class="smallType" name="smallType" type="text" readonly>
+                        </div>
+                        <div class="oldKindDiv">
+                            <label>修改语种：</label>
+                            <select class="province" ng-init="province.id='0'" ng-model="province.id" ng-change="cBox.provinceChange(province.id);city.id='0';" ng-options="id as name for (id,name) in cBox.provinceArr"></select>
+                            <select class="city" ng-init="city.id='0'" ng-model="city.id" ng-change="cBox.cityChange(city.id);" ng-options="id as name for (id,name) in cBox.getCityArr"></select>
+                        </div>
+                    </div>
+
+                    <div class="artistDesDiv publicDiv">
+                        <label><sup>*</sup>歌手简介：</label>
+                        <textarea id="textAreaArtistDes" name="artistDes" cols="30" rows="10" maxlength="140"></textarea>
+                        <p>您还可以输入<span class="desLimit">140</span>个字</p>
+                    </div>
+
+                    <div class="artistSongDiv publicDiv">
+                        <label>主打歌曲：</label>
+                        <textarea id="textAreaSongDes" name="famousSong" cols="30" rows="10" maxlength="140"></textarea>
+                        <p>您还可以输入<span class="desLimit">140</span>个字</p>
+                    </div>
+
+                    <div class="fameDiv publicDiv">
+                        <label>所获荣誉：</label>
+                        <textarea id="textAreaFameDes" name="fameDes" cols="30" rows="10" maxlength="140"></textarea>
+                        <p>您还可以输入<span class="desLimit">140</span>个字</p>
+                    </div>
+
+                    <div class="otherDiv">
+                        <label>其他（备注）：</label>
+                        <input class="otherInput" type="text" name="otherDes" placeholder="不超过20个字符" maxlength="20">
+                    </div>
+                </div> <!-- userBaseMsgLeft of end-->
+                <div class="userBaseMsgRight">
+                    <input class="artistId" type="text" name="artistId">
+                    <!--上传歌手图片-->
+                    <div class="f-cb">
+                        <div class="songImgNatureDiv">
+                            <input class="artistImgSave" type="text" name="artistImg">
+                            <img class="songImgNature" src="frameImg/default_avatar.jpg" alt="加载失败">
+                            <span class="changeImgCover"></span>
+                            <label class="uploadSongImg">
+                                <div class="uploadSongBtn">修改歌手图片</div>
+                                <input class="artistImg" type="file" name="artistImg" accept="image/jpeg,image/png" onchange="uploadSong(this)">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="uploadSongImgPreview f-cb">
+                        <p class="uploadSongImgPreviewTitle">修改图片预览：</p>
+                        <div class="songImgLgSizeDiv">
+                            <img class="songImgLgSize" src="frameImg/default_album.jpg" alt="加载失败">
+                            <p class="songImgLgSizeDes">大尺寸图片（180x180像素）</p>
+                        </div>
+                        <div class="songImgSmSizeDiv">
+                            <img class="songImgSmSize" src="frameImg/default_album.jpg" alt="加载失败">
+                            <p class="songImgSmSizeDes">小尺寸图片（40x40像素）</p>
+                        </div>
+                    </div>
+
+                    <div class="saveArtistDiv">
+                        <a class="modifyArtistConfirm" href="javascript:;">保&nbsp;存&nbsp;修&nbsp;改</a>
+                    </div>
+                </div> <!-- userBaseMsgRight of end-->
+            </form>
+        </div>
+    </div> <!-- uploadSongContentWrap of end -->
+</div>
+<script src="js/modifyArtist.js"></script>

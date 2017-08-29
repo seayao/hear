@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="css/newAlbum.css">
+<!--网页主体部分-->
+<div class="newAlbumContent">
+    <div class="newAlbumWarp">
+        <!-- 热门新碟部分 -->
+        <div class="hotNewAlbum hotNewAlbumAjax">
+            <div class="newAlbumTop">
+                <span class="newAlbumTitle">热门新歌</span>
+            </div>
+            <ul>
+                <li ng-repeat="v in hotNewSong track by $index">
+                    <div class="imgCover" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                        <a class="cdBg" href="javascript:;">
+                            <img class="hotNewSongImg" ng-src="{{v.imgName}}" ui-sref="tabs.songDetails({songId:v._id})" alt="加载失败">
+                        </a>
+                        <a class="playIcon" href="javascript:;"></a>
+                    </div>
+                    <p class="albumDes" ui-sref="tabs.songDetails({songId:v._id})">
+                        <a href="javascript:;">{{v.aWord}}</a>
+                    </p>
+                    <p class="artistDes" ui-sref="tabs.songDetails({songId:v._id})">
+                        <a href="javascript:;">{{v.artist}}</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!-- 热门新碟部分结束 -->
+
+        <!-- 【全部】新碟部分 -->
+        <div class="allNewAlbum hotNewAlbum">
+            <div class="newAlbumTop">
+                <span class="newAlbumTitle albumChangeTitle">全部新歌</span>
+                <div class="areaList">
+                    <a href="javascript:;" data-smallType="all">全部</a>
+                    <span class="line">|</span>
+                    <a href="javascript:;" data-smallType="华语">华语</a>
+                    <span class="line">|</span>
+                    <a href="javascript:;" data-smallType="欧美">欧美</a>
+                    <span class="line">|</span>
+                    <a href="javascript:;" data-smallType="韩国">韩国</a>
+                    <span class="line">|</span>
+                    <a href="javascript:;" data-smallType="日本">日本</a>
+                </div>
+            </div>
+            <ul>
+                <li ng-repeat="v in allNewSong track by $index">
+                    <div class="imgCover" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                        <a class="cdBg" href="javascript:;">
+                            <img class="hotNewSongImg" ng-src="{{v.imgName}}" ui-sref="tabs.songDetails({songId:v._id})" alt="加载失败">
+                        </a>
+                        <a class="playIcon" href="javascript:;"></a>
+                    </div>
+                    <p class="albumDes" ui-sref="tabs.songDetails({songId:v._id})">
+                        <a href="javascript:;">{{v.aWord}}</a>
+                    </p>
+                    <p class="artistDes" ui-sref="tabs.songDetails({songId:v._id})">
+                        <a href="javascript:;">{{v.artist}}</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!-- 【全部】新碟部分结束 -->
+
+        <!--<div class="loading">-->
+            <!--<img src="frameImg/loading.gif" alt="加载失败">-->
+        <!--</div>-->
+
+        <!--<div class="loaded">-->
+            <!--已经加载完了-->
+        <!--</div>-->
+
+    </div><!-- newAlbumWarp of end -->
+</div><!-- newAlbumContent of end -->
+<!--网页主体部分结束-->
+<script src="js/newAlbum.js"></script>

@@ -1,0 +1,170 @@
+<link rel="stylesheet" href="css/topList.css">
+<link rel="stylesheet" href="css/artistDetails.css">
+<link rel="stylesheet" href="css/comment.css">
+<link rel="stylesheet" href="css/sinaFaceAndEffec.css">
+<!--网页主体部分-->
+<div class="songDetailsContent">
+    <div class="topListContentRight">
+        <div class="topListRightWrap">
+            <!--排行榜头部部分-->
+            <div class="topListTopWrap" ng-repeat="v in artistDetails">
+                <div class="songDetailsInfo" data-beCommentId="{{v._id}}" data-beCommentType="歌手" data-beCommentor="{{v.artistName}}">
+                    <div class="songDetailsInfoLeft">
+                        <img ng-src="{{v.artistImg}}" alt="加载失败">
+                    </div>
+                    <div class="songDetailsInfoRight">
+                        <div class="songDetailsInfoRightWrap">
+                            <div class="songDetailsInfoRightTitle">
+                                <i class="songFrom"></i>
+                                <h2 title="{{v.artistName}}">{{v.artistName}}
+                                    <span class="artistShow" ng-if="v.artistNick == null"></span>
+                                    <span class="artistShow" ng-if="v.artistNick">__{{v.artistNick}}</span>
+                                </h2>
+                            </div>
+                            <div class="songDetailsInfoRightUser">
+                                <img ng-if="v.userHead == null" ui-sref="tabs.userDetails({userId:v.userId})" src="frameImg/default_avatar.jpg" alt="加载失败">
+                                <img ng-if="v.userHead" ui-sref="tabs.userDetails({userId:v.userId})" ng-src="{{v.userHead}}" alt="加载失败">
+                                <span class="userName" ui-sref="tabs.userDetails({userId:v.userId})">
+                                    <a href="javascript:;" ng-if="v.userNickName == null">匿名用户</a>
+                                    <a href="javascript:;" ng-if="v.userNickName">{{v.userNickName}}</a>
+                                </span>
+                                <span class="createTime">{{v.uploadTime}}&nbsp;&nbsp;创建</span>
+                            </div>
+                            <div class="artistSexDiv">
+                                <span>歌手性别：</span>
+                                <i class="userSex userSexMan" title="男" ng-if="v.sex == 1"></i>
+                                <i class="userSex userSexWomen" title="女" ng-if="v.sex == 2"></i>
+                            </div>
+                            <div class="songDetailsInfoRightLabel">
+                                <b>歌手分类：</b>
+                                <a href="javascript:;">
+                                    <span>{{v.bigType}}</span>
+                                </a>
+                                <a href="javascript:;">
+                                    <span>{{v.smallType}}</span>
+                                </a>
+                            </div>
+                            <div class="visitCount">
+                                访问量：<strong>{{v.visitor + 1}}</strong>&nbsp;次
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="artistInfoDes">
+                    <h3>歌手简介</h3>
+                    <div class="artisLine"></div>
+                    <p>{{v.artistDes}}</p>
+                </div>
+                <div class="artistInfoDes" ng-if="v.famousSong">
+                    <h3>主打歌曲</h3>
+                    <div class="artisLine"></div>
+                    <p>{{v.famousSong}}</p>
+                </div>
+                <div class="artistInfoDes" ng-if="v.fameDes">
+                    <h3>所获荣誉</h3>
+                    <div class="artisLine"></div>
+                    <p>{{v.fameDes}}</p>
+                </div>
+                <div class="artistInfoDes" ng-if="v.otherDes">
+                    <h3>其他（备注）</h3>
+                    <div class="artisLine"></div>
+                    <p>{{v.otherDes}}</p>
+                </div>
+            </div>
+            <!--排行榜歌曲列表部分-->
+            <div class="topListBodyWrap">
+                <!--评论设计-->
+                <div class="topListComment">
+                    <div class="topListCommentTitle">
+                        <h3>相关评论</h3>
+                        <span class="commentTitle">
+                            <span>共</span>
+                            <strong class="commentTotal" ng-repeat="(key,val) in commentNum">{{val}}</strong>
+                            <span>条评论</span>
+                        </span>
+                    </div>
+                    <!--评论区-->
+                    <div class="commentArea">
+                        <div class="commentDesign">
+                            <div class="head-face">
+                                <img class="commentMyHead" src="frameImg/default_avatar.jpg" alt="加载失败"/>
+                            </div>
+                            <div class="contentDesign">
+                                <div class="cont-box">
+                                    <textarea class="text" maxlength="140" placeholder="说点什么吧~"></textarea>
+                                </div>
+                                <div class="tools-box">
+                                    <div class="operator-box-btn">
+                                        <span class="face-icon" title="添加表情">☺</span>
+                                        <!--<span class="img-icon" title="添加图片">▧</span>-->
+                                    </div>
+                                    <div class="submit-btn">
+                                        <span class="wordLength">140</span>
+                                        <input type="button" value="评论"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comTitle">
+                            <h3>用户评论</h3>
+                        </div>
+                        <!--动态生成评论-->
+                        <div id="info-show">
+                            <ul>
+                                <li class="commentItem" ng-repeat="v in artistComment">
+                                    <div class="head-face" ui-sref="tabs.userDetails({userId:v.commentorId})">
+                                        <img ng-src="{{v.commentorHead}}" alt="加载失败"/>
+                                    </div>
+                                    <div class="reply-cont">
+                                        <span class="username" ui-sref="tabs.userDetails({userId:v.commentorId})"><span>{{v.commentorNick}}</span><b>：</b></span>
+                                        <span class="comment-body" ng-bind-html="v.content | to_trusted"></span>
+                                        <div class="resBody"></div>
+                                        <div class="comment-footer">
+                                            <span class="comment-footer-time">{{v.createTime}}</span>
+                                            <span class="comment-footer-res">回复</span>
+                                            <span class="comment-footer-line">|</span>
+                                            <span class="comment-footer-zanSign">)</span>
+                                            <span class="comment-footer-zanNum">{{v.praiseNum}}</span>
+                                            <span class="comment-footer-zanSign">(</span>
+                                            <span class="comment-footer-zan" title="赞一个"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--动态生成评论结束-->
+                    </div>
+                </div> <!--评论设计结束-->
+            </div>
+        </div>
+    </div><!-- topListContentRight of end -->
+
+    <div class="songDetailsContentLeft">
+        <div class="songDetailsLeftWrap">
+            <h3>广告</h3>
+            <ul>
+                <!--ajax加载-->
+            </ul>
+
+            <h3>猜你喜欢</h3>
+            <ul class="guessList">
+                <li ng-repeat="v in guessLikeArtist" ui-sref="tabs.artistDetails({artistId:v._id})">
+                    <div class="guessHead">
+                        <img ng-src="{{v.artistImg}}" alt="加载失败">
+                    </div>
+                    <div class="guessInfo" title="{{v.artistName}}">
+                        <p class="guessTitle">{{v.artistName}}</p>
+                        <p class="guessUser">{{v.smallType}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div> <!-- songDetailsLeftWrap -->
+    </div><!-- songDetailsContentLeft of end -->
+
+</div><!-- topListContent of end -->
+<!--网页主体部分结束-->
+
+<script src="js/artistDetails.js"></script>
+<script src="js/commentAddImg.js"></script>
+<script src="js/sinaFaceAndEffec.js"></script>
+<script src="js/comment.js"></script>

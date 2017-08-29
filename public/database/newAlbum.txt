@@ -1,0 +1,25 @@
+{
+    "allNewAlbum":[
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆hot1","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋hot2","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆hot3","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋hot4","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆hot5","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋hot6","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆hot7","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋hot8","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆hot9","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋hot10","headTitle":"hot"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆华语1","type":"华语"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋华语2","type":"华语"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆华语3","type":"华语"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋欧美4","type":"欧美"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆欧美5","type":"欧美"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋欧美6","type":"欧美"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆韩国7","type":"韩国"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋韩国8","type":"韩国"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"陈伟霆日本9","type":"日本"},
+        {"imgSrc":"imgRes/newAlbum.jpg","albumDes":"女皇 尊贵的女皇-mwy","artistName":"姚海洋日本10","type":"日本"}
+    ]
+
+}

@@ -1,0 +1,268 @@
+.nav{
+    display: none;
+}
+
+.redLine {
+    width: 100%;
+    height: 4px;
+    background: #c70c0c;
+    box-shadow: 0 2px 2px #afafaf;
+}
+
+.f-cb:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.adminCenterContent{
+    width: 980px;
+    min-height: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+}
+
+.adminCenterContentWrap{
+    padding: 40px;
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.adminCenterTitle{
+    height: 40px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+.adminCenterTitle h3{
+    font-size: 24px;
+    font-weight: normal;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.adminSettingList{
+    margin-bottom: 50px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background: url("../frameImg/table.png") repeat-x;
+    background-position: 0 0;
+}
+
+.adminSettingList li{
+    height: 35px;
+    border-right: 1px solid #ccc;
+    float: left;
+    cursor: pointer;
+}
+
+.adminSettingList li:hover{
+    background: #fff;
+}
+
+.adminSettingList li>em{
+    height: 33px;
+    width: 134px;
+    padding: 2px 2px 0 0;
+    line-height: 33px;
+    font-size: 14px;
+    font-style: normal;
+    display: inline-block;
+    text-align: center;
+}
+
+.commentManageTitle{
+    background: #fff;
+}
+
+.memberManageTop{
+    height: 33px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+.memberManageTop h3{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: normal;
+    float: left;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.memberManageTop .memberNum{
+    margin-top: 5px;
+    margin-left: 10px;
+    line-height: 26px;
+    float: left;
+    font-weight: 400;
+    color: #666;
+}
+
+.memberNumShow{
+    color: #c20c0c;
+    font-weight: bold;
+}
+
+.memberManageRight{
+    float: right;
+}
+
+.memberManageRight:hover>.tipContent{
+    display: block;
+}
+
+.memberManageTip{
+    width: 18px;
+    height: 18px;
+    margin-top: 8px;
+    float: right;
+    display: inline-block;
+    background: url("../frameImg/icon2.png") no-repeat;
+    background-position: 0 -50px;
+    cursor: pointer;
+}
+
+.memberManageTip:hover{
+    background-position: -20px -50px;
+}
+
+.tipContent{
+    width:220px;
+    height: 30px;
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #d3d3d3;
+    color: #666;
+    display: none;
+    z-index: 999;
+    float: right;
+}
+
+.memberList ul{
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+}
+
+.memberList ul li{
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.memberList ul li:hover{
+    background: #f2f2f2;
+}
+
+.memberListHead{
+    width: 90px;
+    height: 38px;
+    line-height: 38px;
+    float: left;
+    padding: 0;
+    text-align: center;
+}
+
+.memberListHeadNum{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #666;
+}
+
+.memberListMsg{
+    width:500px;
+    height: 38px;
+    padding-left: 30px;
+    float: left;
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+}
+
+.memberListMsg em{
+    margin: 0 5px;
+    color: #aeaeae;
+    float: left;
+}
+
+.memberListAccount,.memberListName,.memberListNick{
+    float: left;
+    display: inline-block;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.memberListAccount{
+    max-width:75px;
+    color: #000;
+    font-weight: bold;
+}
+
+.memberListName{
+    max-width:170px;
+    color: #666;
+}
+
+.memberListNick{
+    max-width:220px;
+    color: #aeaeae;
+}
+
+.memberOperation{
+    float: left;
+    width: 276px;
+}
+
+.publicBtn{
+    display: inline-block;
+    width: 50px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    background: #f9f9f9;
+    color: #333;
+    border: solid 1px #c3c3c3;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+.modifyCommentBtn:hover{
+    background: #19a15f;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.delCommentBtn:hover{
+    background: #c20c0c;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.commentDetailsBtn:hover{
+    background: #eb7350;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.commentOtherBtn:hover{
+    background: #4c8bf5;
+    color: #fff;
+    border: 1px solid transparent;
+}
+

@@ -1,0 +1,445 @@
+<link rel="stylesheet" href="css/tabs.css">
+<audio id="myAudio" src=""></audio>
+<div class="top">
+    <div class="topbar">
+        <h1 class="logo"><a ui-sref="tabs.recommend" title="首页"></a></h1>
+        <ul class="topUl">
+            <li ui-sref="tabs.recommend">
+                <a href="javascript:;">发现音乐</a>
+            </li>
+            <li class="navMyMusic">
+                <a href="javascript:;">我的主页</a>
+            </li>
+            <li ui-sref="tabs.friendNoLogin">
+                <a href="javascript:;">朋友</a>
+            </li>
+            <li class="download">
+                <a class="downloadClient" href="javascript:;">下载客户端</a>
+                <sup class="hot"></sup>
+            </li>
+        </ul>
+        <div class="login">
+            <span class="loginSp">登录</span>
+            <div class="loginMethod">
+                <div class="loginSign"></div>
+                <ul>
+                    <li class="pubLogin PhoneLogMethod">
+                        <span class="loginPhone"></span>
+                        <span>手机号登录</span>
+                    </li>
+                    <li class="pubLogin">
+                        <span class="loginQQ"></span>
+                        <span>QQ登录</span>
+                    </li>
+                    <li class="pubLogin">
+                        <span class="loginWb"></span>
+                        <span>新浪微博登录</span>
+                    </li>
+                    <li class="pubLogin adminLogMethod">
+                        <span class="loginAdmin"></span>
+                        <span>管理员帐号登录</span>
+                    </li>
+                    <li class="pubLogin">
+                        <span class="loginWy"></span>
+                        <span>网易邮箱帐号登录</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--登录用户功能列表-->
+        <div class="logUserInfo">
+            <img class="userDefHead" src="frameImg/default_avatar.jpg" alt="加载失败">
+            <div class="userHome">
+                <div class="loginSuccSign"></div>
+                <ul>
+                    <li class="enterMyHome">
+                        <span class="userPage"></span>
+                        <span>我的主页</span>
+                    </li>
+                    <li class="vipHome">
+                        <span class="vipHomeSetting"></span>
+                        <span>会员中心</span>
+                    </li>
+                    <li class="adminCenter">
+                        <span class="adminCenterIcon"></span>
+                        <span>管理中心</span>
+                    </li>
+                    <li class="pwdChange">
+                        <span class="pwdChangeSetting"></span>
+                        <span>修改密码</span>
+                    </li>
+                    <li class="exitLoginBtn">
+                        <span class="exitLogin"></span>
+                        <span>退出登录</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--搜索设计-->
+        <div class="search">
+            <input class="searchInput" type="text" placeholder="歌曲/歌手/用户">
+            <div class="searchResult">
+                <div class="serResTop">
+                    <div class="seaLoading"></div>
+                    <span class="serResTopTip" ng-repeat="(key,val) in total">
+                        搜索到<strong>&nbsp;{{val}}&nbsp;</strong>条结果
+                        <span ng-if="val == 0">&nbsp;&nbsp;上次搜索记录↓</span>
+                    </span>
+                </div>
+                <div class="serResCon">
+                    <!--歌曲搜索结果-->
+                    <div class="searchSongResult seaPubResult">
+                        <div class="seaPubTitle" ng-repeat="(key,val) in songTotal">
+                            <h3 ng-if="val != 0">相关歌曲</h3>
+                        </div>
+                        <ul class="serPubList">
+                            <li ng-repeat="v in searchSong" ui-sref="tabs.songDetails({songId:v._id})">
+                                <span>{{v.songName}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--歌手搜索结果-->
+                    <div class="searchArtistResult seaPubResult">
+                        <div class="seaPubTitle" ng-repeat="(key,val) in artistTotal">
+                            <h3 ng-if="val != 0">相关歌手</h3>
+                        </div>
+                        <ul class="serPubList">
+                            <li ng-repeat="v in searchArtist" ui-sref="tabs.artistDetails({artistId:v._id})">
+                                <span>{{v.artistName}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--用户搜索结果-->
+                    <div class="searchUserResult seaPubResult">
+                        <div class="seaPubTitle" ng-repeat="(key,val) in userTotal">
+                            <h3 ng-if="val != 0">相关用户</h3>
+                        </div>
+                        <ul class="seaUserList serPubList">
+                            <li ng-repeat="v in searchUser" ui-sref="tabs.userDetails({userId:v._id})">
+                                <span>{{v.nickname}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- top of end -->
+
+<!--弹出提示框设计-->
+<div class="dialog">
+    <div class="applyAlert">
+        <div class="applyAlertTop">
+            <div class="applyAlertTip">
+                <span>听见好声音提示您：</span>
+            </div>
+            <div class="closeAlert" title="关闭">×</div>
+        </div>
+        <div class="applyAlertContent">
+            <i></i>
+            <p class="applyVipTip"></p>
+        </div>
+        <div class="applyAlertBottom">
+            <a class="closeAlertBottom" href="javascript:;">我知道了</a>
+        </div>
+    </div>
+</div>
+
+<!--修改密码框设计-->
+<div class="changePwdBox">
+    <div class="changePwdBoxTop">
+        <h4>修改密码</h4>
+        <span class="closeChangePwdBox" title="关闭">×</span>
+    </div>
+    <div class="changePwdBoxMiddle">
+        <div class="oldPwdDiv">
+            <input class="oldPwdInput" type="password" placeholder="请输入旧密码">
+            <span class="oldPwdTip"></span>
+        </div>
+        <div class="newPwdDiv">
+            <input class="newPwdInput" type="password" placeholder="请设置新密码">
+            <span class="newPwdTip"></span>
+        </div>
+        <div class="confirmPwdDiv">
+            <input class="confirmPwdInput" type="password" placeholder="确认新密码">
+            <span class="confirmPwdTip"></span>
+        </div>
+        <div class="changePwdDiv">
+            <input class="changePwdBtn" type="button" value="修&nbsp;改&nbsp;密&nbsp;码">
+        </div>
+    </div>
+    <div class="changePwdBoxBottom">
+        <a class="changePwdBoxLogin" href="javascript:;">&lt;去登录</a>
+        <p class="changePwdTips"></p>
+        <a class="changePwdBoxReg" href="javascript:;">没有帐号？免费注册&gt;</a>
+    </div>
+</div>
+
+<!--管理员登录框设计-->
+<div class="loginAdminBox">
+    <!--登录成功时的蒙板设计-->
+    <div class="loginAdminBoxCover">
+        <div class="adminLoading">
+            <img src="frameImg/logLoading.gif" alt="加载失败">
+            <p>正在登录，请稍后……</p>
+        </div>
+    </div>
+    <div class="loginAdminBoxTop">
+        <h4>管理员帐号登录</h4>
+        <span class="closeAdminBox" title="关闭">×</span>
+    </div>
+    <div class="loginAdminBoxMiddle">
+        <div class="adminBoxText">
+            <input class="adminAccount" type="text" placeholder="请输入帐号">
+        </div>
+        <div class="adminBoxPwd">
+            <input class="adminPwd" type="password" placeholder="请输入密码">
+        </div>
+        <div class="adminLogDiv">
+            <input class="adminLogBtn" type="button" value="登&nbsp;&nbsp;录">
+        </div>
+    </div>
+    <div class="loginAdminBoxBottom">
+        <a class="exitAdminBox" href="javascript:;">&lt;在线浏览，暂不登录</a>
+        <p class="adminLoginTips"></p>
+    </div>
+</div>
+
+<!--手机登录框设计-->
+<div class="loginPhoneBox">
+    <!--登录成功时的蒙板设计-->
+    <div class="loginPhoneBoxCover">
+        <div class="coverLoading">
+            <img src="frameImg/logLoading.gif" alt="加载失败">
+            <p>正在登录，请稍后……</p>
+        </div>
+    </div>
+    <div class="loginPhoneBoxTop">
+        <h4>手机号登录</h4>
+        <span class="closeBox" title="关闭">×</span>
+    </div>
+    <div class="loginPhoneBoxMiddle">
+        <div class="phoneBoxText">
+            <input class="inputAccount" type="text" placeholder="请输入帐号" maxlength="11">
+            <span class="accountTip"></span>
+        </div>
+        <div class="phoneBoxPwd">
+            <input class="inputPwd" type="password" placeholder="请输入密码">
+            <span class="passwordTip"></span>
+        </div>
+        <div class="loginValidate">
+            <input class="loginValidateInput" type="text" placeholder="请输入验证码" maxlength="4">
+            <canvas id="myCan" width="90" height="32" title="点击刷新验证码"></canvas>
+            <span class="logVerCodeTip"></span>
+        </div>
+        <div class="phoneLoginAuto">
+            <input id="loginAuto" type="checkbox" checked="checked">
+            <label for="loginAuto">记住我？</label>
+            <a href="" target="_blank">忘记密码？</a>
+        </div>
+        <div class="loginBtn">
+            <input type="button" value="登&nbsp;&nbsp;录">
+        </div>
+    </div>
+    <div class="loginPhoneBoxBottom">
+        <a class="other" href="javascript:;">&lt;在线浏览，暂不登录</a>
+        <p class="loginTips"></p>
+        <a class="register" href="javascript:;">没有帐号？免费注册&gt;</a>
+    </div>
+</div>
+<!-- 手机登录框设计 of end -->
+
+<!--注册框设计-->
+<div class="registerBox">
+    <div class="registerBoxTop">
+        <h4>帐号注册</h4>
+        <span class="closeBox" title="关闭">×</span>
+    </div>
+    <div class="registerBoxMiddle">
+        <div class="registerAccount">
+            <label><sup>*</sup>手机号码：</label><br>
+            <input class="registerAccInput" type="text" placeholder="请输入11位手机号" maxlength="11">
+            <span class="registerAccountTip"></span>
+        </div>
+        <div class="registerPwd">
+            <label><sup>*</sup>设置密码：</label><br>
+            <input class="registerPwdInput" type="password" placeholder="以字母开头，6-16个字符" maxlength="20">
+            <span class="showPwdEye"></span>
+            <span class="registerPwdTip"></span>
+        </div>
+        <div class="validate">
+            <label><sup>*</sup>短信验证：</label>
+            <span class="verCode"></span><br>
+            <input class="validateInput" type="text" placeholder="6位验证码" maxlength="6">
+            <input class="getValidate" type="button" value="获取短信">
+            <span class="verCodeTip"></span>
+        </div>
+        <div class="registerBtn">
+            <input type="checkbox" checked id="readAndAgree">
+            <label for="readAndAgree">我已认真阅读并同意</label>
+            <a ui-sref="serverRules" target="_blank">《听见服务条款》</a><br>
+            <input class="signUpBtn" type="button" value="注&nbsp;&nbsp;册">
+        </div>
+    </div>
+    <div class="registerBoxBottom">
+        <a class="backLogin" href="javascript:;">&lt;返回登录</a>
+        <p class="registerTips"></p>
+    </div>
+</div>
+<!--注册框设计 of end-->
+
+<!--音乐开始播放提示-->
+<div class="musicPlayTipDiv">
+    <span class="musicPlayTipIcon">已开始播放</span>
+</div>
+
+<!--播放模式切换提示-->
+<div class="musicModeTipDiv">
+    <span class="musicModeTipIcon"></span>
+</div>
+
+<div class="nav">
+    <ul>
+        <li class="one" ui-sref="tabs.recommend"><a href="javascript:;">推荐</a></li>
+        <li class="two" ui-sref="tabs.topList"><a href="javascript:;">排行榜</a></li>
+        <li class="three" ui-sref="tabs.songList"><a href="javascript:;">歌曲</a></li>
+        <li class="four" ui-sref="tabs.newAlbum"><a href="javascript:;">新歌上架</a></li>
+        <li class="five" ui-sref="tabs.artist"><a href="javascript:;">歌手</a></li>
+        <li class="six" ui-sref="tabs.serverHome"><a href="javascript:;">帮助中心</a></li>
+    </ul>
+    <div class="redSign"></div>
+</div> <!-- nav of end -->
+
+<!--返回顶部-->
+<div class="backTop">
+    <a href="javascript:;" title="回到顶部"></a>
+</div>
+
+<!--悬浮球制作-->
+<div class="float-menu">
+    <div class="circle" title="展开/隐藏播放条">
+        <div class="cross">+</div>
+    </div>
+    <div class="menu-content">
+        <div class="musicPlayer">
+            <div class="musicPlayerBtn">
+                <i class="musicPlayerPrev" title="上一首"></i>
+                <i class="playOrPause musicPlayerPlay" title="暂停/播放"></i>
+                <i class="musicPlayerNext" title="下一首"></i>
+            </div>
+            <div class="musicPlayerHead">
+                <img src="frameImg/default_album.jpg" alt="加载失败">
+                <a class="musicPlayerMask" href="javascript:;"></a>
+            </div>
+            <div class="musicPlayerRange" data-songId="">
+                <div class="rangeText">
+                    <span class="rangeTextSong">歌名</span>
+                    <span class="rangeTextSinger">歌手</span>
+                </div>
+                <div class="rangeBar">
+                    <span class="rangePlayerBg"></span>
+                    <input class="rangePlayer" type="range" value="0" min="0" max="" step="1">
+                    <!--<i class="playLoading"></i>-->
+                    <span class="rangeBarTime">
+                        <span class="currentTime">0:00</span>/
+                        <span class="TotalTime">0:00</span>
+                    </span>
+                </div>
+            </div>
+            <div class="musicFavBtnDiv">
+                <i class="musicFavBtn" title="收藏"></i>
+                <i class="targetSongDetails" title="详情"></i>
+            </div>
+            <div class="musicPlayerFlag">
+                <div class="volumeBar">
+                    <!--音量条设计-->
+                    <span class="rangeVolumeBg"></span>
+                    <input class="rangeVolume" type="range" value="0.4" min="0" max="1" step="0.1">
+                </div>
+                <i class="volumeControl" title="音量"></i>
+                <i class="pubPlayMode playMode2" data-mode="2" title="列表循环"></i>
+                <span class="playerLists">
+                    <i class="listsBtn" title="播放列表"></i>
+                    <span class="totalSong">0</span>
+                </span>
+            </div>
+        </div> <!--musicPlayer of end-->
+    </div>
+</div>
+
+<!--播放列表展开时-->
+<div class="openPlayerList">
+    <div class="playerListTop">
+        <h4 class="deafultPlayList">播放列表(<span class="openPlayerTotalSong">0</span>)</h4>
+        <h4 class="playListNumShow" ng-repeat="(key,val) in playListNum">播放列表(<span class="openPlayerTotalSong">{{val}}</span>)</h4>
+        <a class="collectAll" href="javascript:;">
+            <span class="collectAllIco"></span>
+            收藏全部
+        </a>
+        <span class="colLine">|</span>
+        <a class="clsAll" href="javascript:;">
+            <span class="clsAllIco"></span>
+            清空列表
+        </a>
+        <span class="playerListSongName">歌名</span>
+        <span class="closePlayList" title="关闭">×</span>
+    </div>
+    <div class="playerListBody">
+        <div class="playerListLeft">
+            <ul>
+                <li id="{{v.songId}}" class="addSongMsg" ng-repeat="v in playList track by $index" data-songId="{{v.songId}}" data-songName="{{v.songName}}" data-songImg="{{v.songImg}}" data-artist="{{v.artist}}" data-mp3File="{{v.mp3File}}">
+                    <div class="pubPlayIcon playIconUnChecked"></div>
+                    <div class="playSongName" title="歌曲">{{v.songName}}</div>
+                    <div class="playerToolsWrap">
+                        <div class="playerTools">
+                            <div class="playerListFav" title="收藏"></div>
+                            <div class="playerListDown" title="下载"></div>
+                            <div class="playerListDel" title="删除"></div>
+                        </div>
+                    </div>
+                    <div class="playArtistName" title="歌手">{{v.artist}}</div>
+                    <div class="playSongTime" title="创建时间">{{v.createTime}}</div>
+                    <div class="playSongDetail" title="详情"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="playerListRight">
+            <!--歌词面板-->
+        </div>
+    </div>
+</div> <!--播放列表 of end -->
+
+<!--【中间需要变化的部分：使用ui-view呈现】-->
+<ui-view></ui-view>
+
+<div class="footer">
+    <div class="footerTop">
+        <div class="footerLogo">
+            <a ui-sref="tabs.recommend">
+                <img src="frameImg/musictree.png" alt="加载失败">
+            </a>
+        </div>
+        <div class="footerHref">
+            <a ui-sref="about" target="_blank">关于听见</a>
+            <em>-</em>
+            <a ui-sref="serverRules" target="_blank">服务条款</a>
+            <em>-</em>
+            <a ui-sref="tabs.serverHome">帮助中心</a>
+            <em>-</em>
+            <a ui-sref="yhy" target="_blank">我的简历</a>
+            <em>-</em>
+            <a href=tencent://message/?uin=250159440&Site=hear.com&Menu=yes">QQ咨询</a>
+        </div>
+        <div class="footerWord">
+            <a ui-sref="tabs.recommend">
+                <img src="frameImg/hear.png" alt="加载失败">
+            </a>
+        </div>
+    </div>
+    <div class="footerBottom">
+        <p>Copyright &copy;Hear&nbsp;2012-2016&nbsp;Pdsxyhy&nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
+    </div>
+</div> <!--footer of end-->
+<script src="js/tab.js"></script>
+<script src="js/xuanfuqiu.js"></script>

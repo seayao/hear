@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="css/serverHome.css">
+<div class="serverHomeContent">
+    <div class="serverHomeWrap">
+
+        <div class="problemCommon">
+            <div class="problemCommonTop">
+                <span class="hotRecommendIco"></span>
+                <span class="problemCommonTitle">常见问题</span>
+                <span class="problemCommonDes">您的满意是我们不懈的追求</span>
+            </div>
+            <div class="problemCommonLeft">
+                <div class="threeDNav"><span class="navTitle">您可能遇到了？</span>
+                    <ul class="problemList">
+                        <li class="problemItem" title="点击查看详情" ng-repeat="v in problemList" data-problemId="{{v._id}}">
+                            <i class="problemIcon"></i>
+                            <span>{{v.problemTitle}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="problemCommonRight">
+                <ul class="problemLists">
+                    <!--js动态生成-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="adviceBack">
+            <div class="problemCommonTop">
+                <span class="hotRecommendIco"></span>
+                <span class="problemCommonTitle">提交问题</span>
+                <span class="problemCommonDes">您的反馈就是对我们最大的鼓励</span>
+            </div>
+            <div class="adviceBackBody">
+                <form action="" method="post" id="problemTable">
+                    <!--存储当前用户-->
+                    <input class="userIdHide" type="text" name="userId">
+                    <input class="userNickHide" type="text" name="userNick">
+                    <label><sup>*</sup>问题主题：</label><input class="serverUserName" type="text" name="problemTitle" placeholder="不超过30个字符" maxlength="30">
+                    <p>请输入您遇到的问题简述</p>
+                    <label><sup>*</sup>问题分类：</label>
+                    <select class="problemType" name="problemType">
+                        <option value="">请选择</option>
+                        <option value="歌曲问题">歌曲问题</option>
+                        <option value="歌手问题">歌手问题</option>
+                        <option value="音乐播放">音乐播放</option>
+                        <option value="帐号问题">帐号问题</option>
+                        <option value="其他">其他</option>
+                    </select>
+                    <p>请选择问题分类</p>
+                    <label>&nbsp;问题详情：</label><textarea id="textAreaContent" name="problemDes" cols="30" rows="10" maxlength="300" placeholder="请尽可能详细地描述您的问题或您已经解决的方法供大家交流学习"></textarea>
+                    <p>您还可以输入<span class="wordLength">300</span>个字</p>
+                    <div class="formBtn">
+                        <input class="resAdviceBtn" type="reset" value="重置">
+                        <input class="subAdviceBtn" type="button" value="提交">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div> <!--serverHomeContent of end -->
+<script src="js/serverHome.js"></script>

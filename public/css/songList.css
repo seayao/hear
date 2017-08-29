@@ -1,0 +1,339 @@
+.nav .one{
+    background:none;
+}
+
+.nav .one a{
+    background:none;
+}
+
+.nav .three{
+    background: url("../frameImg/topbar.png");
+    background-position: left -268px;
+}
+
+.nav .three a{
+    background: url("../frameImg/topbar.png");
+    background-position: right -268px;
+}
+
+.f-cb:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.songListsContent{
+    width:980px;
+    min-height: 700px;
+    margin: 0 auto;
+    background: #fff;
+    border-left: solid 1px #d3d3d3;
+    border-right: solid 1px #d3d3d3;
+}
+
+.songListsContent:after{
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.songListsWarp{
+    padding: 40px;
+}
+
+.songListsTop{
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+.songListsTitle{
+    font-size: 24px;
+    font-weight: normal;
+    color: #333;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.songListsClassify{
+    width:90px;
+    height: 29px;
+    font-size: 12px;
+    margin: 2px 0 0 10px;
+    line-height: 29px;
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    background: #f9f9f9;
+    border: solid 1px #c3c3c3;
+    border-radius: 4px;
+    color: #0c73c2;
+}
+
+.songListsClassify:hover{
+    background-color: #fff;
+}
+
+.songListsOrder{
+    width:93px;
+    height: 29px;
+    float: right;
+    font-size: 12px;
+    background: url("../frameImg/button.png");
+    background-position: 0 0;
+}
+
+.songListsHot{
+    color: #fff;
+    float: left;
+    width: 46px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.songListsHot:hover{
+    text-decoration: underline;
+}
+
+.songListsNew{
+    color: #000;
+    float: right;
+    width: 46px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.songListsNew:hover{
+    text-decoration: underline;
+}
+
+.hotRecommend ul{
+    height: auto;
+    margin-left: -50px;
+
+}
+
+.hotRecommend ul:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.hotRecommend li{
+    margin-left: 8px;
+    padding-bottom:10px;
+}
+
+.hotRecommend p,span{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.hotRecommend label{
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.hotRecommend .userName{
+    color: #0c73c2;
+    font-size: 12px;
+}
+
+.hotRecommend .userName:hover{
+    text-decoration: underline;
+}
+
+.songListsPager{
+    width:900px;
+    padding-top: 15px;
+}
+
+.songListsP{
+    width:312px;
+    margin:0 auto;
+    font-size: 12px;
+}
+
+.songListsP li{
+    float: left;
+}
+
+.songListsP .numPage{
+    display: inline-block;
+    width: 24px;
+    height: 22px;
+    margin: 0 4px 0 4px;
+    border-radius: 2px;
+    border:solid 1px #ccc;
+    line-height: 22px;
+    text-align: center;
+    color: #000;
+}
+
+.songListsP .num1Page{
+    color: #fff;
+    background: url("../frameImg/button.png");
+    background-position: 0 -650px;
+}
+
+.songListsP .numPage:hover{
+    border-color: #333;
+}
+
+.songListsP .previous,.next{
+    display: inline-block;
+    width: 47px;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 22px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #000;
+    background: url("../frameImg/button.png") no-repeat;
+    background-position:0 -560px;
+}
+
+.songListsP .next{
+    width:57px;
+    padding-left: 12px;
+    background-position:-75px -560px;
+}
+
+.cateListBox{
+    width: 720px;
+    min-height: 300px;
+    /*高度暂定*/
+    position: absolute;
+    top: 193px;
+    left: 220px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 4px #a0a0a0;
+    z-index: 999;
+    display: none;
+}
+
+.cateListBoxHd{
+    width: 100%;
+    height: 57px;
+    border-bottom: solid 1px #e6e6e6;
+}
+
+.cateListArrow{
+    width: 24px;
+    height: 11px;
+    display: inline-block;
+    background: url("../frameImg/iconall.png");
+    background-position: -48px 0;
+    position: absolute;
+    top: -11px;
+    left: 132px;
+}
+
+.cateListBoxHd .allStyle{
+    width: 75px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+    color: #333;
+    font-size: 12px;
+    background: #f9f9f9;
+    border: solid 1px #bebebe;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-left: 26px;
+}
+
+.cateListBoxHd .allStyle:hover{
+    background: #fff;
+    text-decoration: underline;
+}
+
+.cateListBoxBd{
+    width:100%;
+}
+
+.cateListBoxBd dl:last-of-type{
+    padding-bottom: 16px;
+}
+
+.cateListBoxBd dt{
+    width: 70px;
+    border-right: 1px solid #e6e6e6;
+    margin: 0 -100px 0 26px;
+    padding-top: 15px;
+    font-weight: bold;
+    float: left;
+    font-size: 12px;
+    color: #333;
+}
+
+.cateListBoxBd .langueIco{
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../frameImg/icon.png");
+    background-position: -20px -735px;
+}
+
+.cateListBoxBd .styleIco{
+    background-position: 0 -60px;
+}
+
+.cateListBoxBd .sceneIco{
+    background-position: 0 -88px;
+}
+
+.cateListBoxBd .emotionIco{
+    background-position: 0 -117px;
+}
+
+.cateListBoxBd .themeIco{
+    background-position: 0 -141px;
+}
+
+.cateListBoxBd dd{
+    margin-left: 96px;
+    padding: 16px 15px 0 15px;
+    border-left: 1px solid #e6e6e6;
+    line-height: 24px;
+    font-size: 12px;
+}
+
+.cateListBoxBd dd a{
+    color: #333;
+}
+
+.cateListBoxBd dd a:hover{
+    text-decoration: underline;
+}
+
+.cateListBoxBd .line{
+    color: #d8d8d8;
+    margin: 0 6px 0 5px;
+}
+
+/*add new*/
+.iconPlaySongList{
+    width: 16px;
+    height: 17px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 110px;
+    background: url(../frameImg/iconall.png);
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+.iconPlaySongList:hover {
+    background-position: 0 -60px;
+}

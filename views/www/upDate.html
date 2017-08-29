@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="css/upDate.css">
+<div class="redLine">
+</div>
+
+<div class="upDateContent">
+    <div class="upDateContentWrap">
+        <div class="upDateTitle">
+            <h3>个人设置</h3>
+        </div>
+        <ul class="userSettingUl f-cb">
+            <li class="userBaseMsgTitle">
+                <em>基本资料</em>
+            </li>
+            <li class="upLoadSongTitle">
+                <em>上传歌曲</em>
+            </li>
+            <li class="upLoadArtistTitle">
+                <em>上传歌手</em>
+            </li>
+            <li class="backMyHomeTitle">
+                <em>我的主页</em>
+            </li>
+        </ul>
+        <div class="userBaseMsg f-cb">
+            <form action="" method="post" id="userMsgTable">
+                <div class="userBaseMsgLeft">
+                    <div class="nicknameDiv">
+                        <label>昵称：</label><input class="nickname" type="text" name="nickname" placeholder="不超过16个字符" maxlength="16">
+                    </div>
+                    <div class="userSexDiv">
+                        <label>性别：</label>
+                        <label for="male">
+                            <input id="male" type="radio"  name="sex" checked value="1">
+                            男
+                        </label>
+                        <label for="female">
+                            <input id="female" type="radio" name="sex" value="2">
+                            女
+                        </label>
+                    </div>
+                    <div class="contactDiv">
+                        <label>社交：</label>
+                        <select name="contactWay" id="">
+                            <option class="WYEmail" value="邮箱" selected>邮箱</option>
+                            <option class="SINAWB" value="新浪微博">新浪微博</option>
+                            <option class="TXQQ" value="QQ">QQ</option>
+                            <option class="WEIXIN" value="微信">微信</option>
+                            <option class="PHONE" value="手机号码">手机号码</option>
+                        </select>
+                        <input class="contactMethod" type="text" name="contactInfo">
+                    </div>
+                    <div class="userSignDiv">
+                        <label>个性签名：</label>
+                        <textarea id="textAreaSign" name="userSign" cols="30" rows="10" maxlength="140"></textarea>
+                        <p>您还可以输入<span class="wordLimit">140</span>个字</p>
+                    </div>
+                </div> <!-- userBaseMsgLeft of end-->
+                <div class="userBaseMsgRight">
+                    <input class="userPhoneHide" type="text" name="userId">
+                    <div class="userHeadNatureDiv">
+                        <img class="userHeadNature" src="frameImg/default_avatar.jpg" alt="加载失败">
+                        <span class="changeHeadCover"></span>
+                        <label class="upLoadHead">
+                            <div class="changeHeadBtn">更换头像</div>
+                            <input type="file" name="uploadImg" accept="image/jpeg,image/png" onchange="uploadHead(this)">
+                        </label>
+                    </div>
+
+                    <div class="upLoadImgPreview f-cb">
+                        <p class="upLoadImgPreviewTitle">上传头像预览：</p>
+                        <div class="userHeadLgSizeDiv">
+                            <img class="userHeadLgSize" src="frameImg/default_avatar.jpg" alt="加载失败">
+                            <p class="userHeadLgSizeDes">大尺寸头像（180x180像素）</p>
+                        </div>
+                        <div class="userHeadSmSizeDiv">
+                            <img class="userHeadSmSize" src="frameImg/default_avatar.jpg" alt="加载失败">
+                            <p class="userHeadSmSizeDes">小尺寸头像（40x40像素）</p>
+                        </div>
+                    </div>
+                    <div class="saveUserMsgDiv">
+                        <a class="saveUserMsg" href="javascript:;">保&nbsp;存&nbsp;修&nbsp;改</a>
+                    </div>
+                </div> <!-- userBaseMsgRight of end-->
+            </form>
+        </div>
+    </div> <!-- upDateContentWrap of end -->
+</div>
+<script src="js/upDate.js"></script>

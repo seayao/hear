@@ -1,0 +1,205 @@
+<link rel="stylesheet" href="css/topList.css">
+<link rel="stylesheet" href="css/comment.css">
+<link rel="stylesheet" href="css/sinaFaceAndEffec.css">
+<!--网页主体部分-->
+<!--
+                        ....:;$$$$$$$$$$;
+                    ..;;;$$$            $:..
+                 .:$$$$$$               $$$$$:.
+               .;$$$$$$$3             $$$$$$$$$;.
+             .;$$$$$$$$$$      $$$$$$$;$$$$$$$$$$;.
+            ;$$$$$$$$$$$$$    $$;$$$$$$$$$$$$$$$$$$;
+           ;$$$$$$$$$$$$$$$$    $$$$$$$$$$$$$$$$$$$$$
+          $$$$$$$$$$$$$$$$$$$    $$$$$$$$$$$$$$$$$$$$$
+         :$$$$$$$$$$$$$$$$$$$$    $$$$$$$$$$$$$$$$$$$$;
+        .$$$$$$$$$$$$$$$$$$$$$$$   $$$$$$$$$$$$$$$$$$$$.
+        :$$$$$$$$$$$$$$$$$$$$$$$$   $$$$$$$$$$$$$$$$$$$:
+        ;$$$$$$$$$$$$$$$$$$$$$$$$$$  $$$$$$$$$$$$$$$$$$;
+        ;$$$$$$$$$$$$$$$$$$$$$$$$$$$   $$$$$$$$$$$$$$$$;
+        :$$$$$$$$$$$$$$$$$$             $$$$$$$$$$$$$$$:
+        .$$$$$$$$$$$$$$$                 $$$$$$$$$$$$$$.
+         ;$$$$$$$$$$$$$                   $$$$$$$$$$$$;
+          $$$$$$$$$$$$                     $$$$$$$$$$$
+           $$$$$$$$$$                      $$$$$$$$$$
+            ;$$$$$$$$                     $$$$$$$$$;
+             .$$$$$$$$                   $$$$$$$$$.
+               .$$$$$$$$               $$$$$$$$$:
+                 .;$$$$$$$$          $$$$$$$$;.
+                    .:$$$$$$$$$$$$$$$$$$$$:.
+                        ...:;;;;;;;;:...
+
+     交互:姚海洋 & 视觉:姚海洋 & 重构:姚海洋 & 前端:姚海洋
+                      听见好声音倾情出品
+-->
+<div class="topListContent">
+    <div class="topListContentLeft">
+        <div class="topListLeftWrap">
+            <h3>音乐特色榜</h3>
+            <ul>
+                <!--ajax加载-->
+            </ul>
+
+            <h3>全球媒体榜</h3>
+            <ul>
+                <!--ajax加载-->
+            </ul>
+        </div> <!-- topListLeftWrap -->
+    </div><!-- topListContentLeft of end -->
+
+    <div class="topListContentRight">
+        <div class="topListRightWrap">
+            <!--排行榜头部部分-->
+            <div class="topListTopWrap">
+                <div class="topListInfo">
+                    <div class="topListInfoLeft" ng-repeat="(key,val) in topListImg">
+                        <img ng-src="{{val}}" alt="加载失败">
+                    </div>
+                    <div class="topListInfoRight">
+                        <div class="topListInfoRightWrap">
+                            <div class="topListInfoRightTitle" ng-repeat="(key,val) in topListName">
+                                <h3>{{val}}</h3>
+                            </div>
+                            <div class="topListInfoRightUpdate">
+                                <i></i>
+                                <span>最近更新：5月1日</span>
+                                <span>（暂不更新）</span>
+                            </div>
+                            <div class="topListInfoRightBtn">
+                                <p>榜单介绍：榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍榜单介绍</p>
+                                <!--<a class="playBtn" href="javascript:;">-->
+                                    <!--<span>-->
+                                        <!--<em></em>-->
+                                        <!--播放-->
+                                    <!--</span>-->
+                                <!--</a>-->
+                                <!--<a class="addPlayList" href="javascript:;" title="添加到播放列表"></a>-->
+                                <!--<a class="collectBtn" href="javascript:;" title="收藏">-->
+                                    <!--<span>(111111)</span>-->
+                                <!--</a>-->
+                                <!--<a class="shareBtn" href="javascript:;" title="分享">-->
+                                    <!--<span>(111)</span>-->
+                                <!--</a>-->
+                                <!--<a class="downloadBtn" href="javascript:;" title="下载">-->
+                                    <!--<span>下载</span>-->
+                                <!--</a>-->
+                                <!--<a class="commentBtn" href="javascript:;" title="评论">-->
+                                    <!--<span>(22222)</span>-->
+                                <!--</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--排行榜歌曲列表部分-->
+            <div class="topListBodyWrap">
+                <div class="topListBodyTitle">
+                    <h3>歌曲列表</h3>
+                    <span class="songTitle" ng-repeat="(key,val) in topListNum">
+                        <span>共</span>
+                        <span class="songNum">{{val}}</span>
+                        <span>首歌</span>
+                    </span>
+                    <!--<div class="playCount">-->
+                        <!--播放：<strong>21214214</strong>次-->
+                    <!--</div>-->
+                </div>
+                <!--歌曲列表设计-->
+                <div class="topListSong_list">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="th1"></th>
+                            <th class="thTitle">
+                                <span>歌曲-标题</span>
+                            </th>
+                            <th class="thTime">
+                                <span>上传时间</span>
+                            </th>
+                            <th class="thSinger">
+                                <span>歌手</span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="topOne" ng-repeat="v in topList track by $index">
+                                <td>
+                                    <span class="tableSongNth">{{$index + 1}}</span>
+                                    <i></i>
+                                </td>
+                                <td class="rank">
+                                    <div class="topOneBody" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                                        <img ng-src="{{v.imgName}}" ui-sref="tabs.songDetails({songId:v._id})" alt="加载失败">
+                                        <span class="tablePlayTopList"></span>
+                                        <div class="topOneInfo">
+                                            <span class="tableTxt">
+                                                <span class="tableSongName">{{v.songName}}</span>
+                                                <em>-</em>
+                                                <span class="tableSongInfo">{{v.aWord}}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tableSongTime">
+                                    <span class="tableSongDuration">{{v.uploadTime}}</span>
+                                    <div class="tableSongShow" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                                        <a class="tableSongAdd" href="javascript:;" ui-sref="tabs.songDetails({songId:v._id})" title="详情"></a>
+                                        <a class="tableSongFav" href="javascript:;" title="收藏"></a>
+                                        <a class="tableSongDown" href="{{v.mp3File}}" target="_blank" title="下载"></a>
+                                    </div>
+                                </td>
+                                <td class="tableSinger">
+                                    <span class="tableSingerName">{{v.artist}}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!--歌曲列表设计结束-->
+                <!--评论设计-->
+                <!--<div class="topListComment">-->
+                    <!--<div class="topListCommentTitle">-->
+                        <!--<h3>评论</h3>-->
+                        <!--<span class="commentTitle">共<span class="commentNum">3214</span>条评论</span>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;评论区&ndash;&gt;-->
+                    <!--<div class="commentArea">-->
+                        <!--<div class="commentDesign">-->
+                            <!--<div class="head-face">-->
+                                <!--<img class="commentMyHead" src="frameImg/default_avatar.jpg" alt="加载失败"/>-->
+                            <!--</div>-->
+                            <!--<div class="contentDesign">-->
+                                <!--<div class="cont-box">-->
+                                    <!--<textarea class="text" maxlength="140" placeholder="说点什么吧~"></textarea>-->
+                                <!--</div>-->
+                                <!--<div class="tools-box">-->
+                                    <!--<div class="operator-box-btn">-->
+                                        <!--<span class="face-icon" title="添加表情">☺</span>-->
+                                        <!--&lt;!&ndash;<span class="img-icon" title="添加图片">▧</span>&ndash;&gt;-->
+                                    <!--</div>-->
+                                    <!--<div class="submit-btn">-->
+                                        <!--<span class="wordLength">140</span>-->
+                                        <!--<input type="button" value="评论"/>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="comTitle">-->
+                            <!--<h3>用户评论</h3>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;动态生成评论&ndash;&gt;-->
+                        <!--<div id="info-show">-->
+                            <!--<ul></ul>-->
+
+                        <!--</div>-->
+                        <!--&lt;!&ndash;动态生成评论结束&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div> &lt;!&ndash;评论设计结束&ndash;&gt;-->
+            </div>
+        </div>
+    </div><!-- topListContentRight of end -->
+</div><!-- topListContent of end -->
+<!--网页主体部分结束-->
+<!--<script src="js/recommend.js"></script>-->
+<script src="js/topList.js"></script>
+<script src="js/commentAddImg.js"></script>
+<script src="js/sinaFaceAndEffec.js"></script>
+<script src="js/comment.js"></script>

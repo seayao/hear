@@ -1,0 +1,49 @@
+{
+    "banner":[
+        {"songId":"a1001","imgSrc":"imgRes/banner1.jpg"},
+        {"songId":"a1002","imgSrc":"imgRes/banner2.jpg"},
+        {"songId":"a1003","imgSrc":"imgRes/banner3.jpg"},
+        {"songId":"a1004","imgSrc":"imgRes/banner4.jpg"},
+        {"songId":"a1005","imgSrc":"imgRes/banner5.jpg"}
+    ],
+
+    "hotRec":[
+        {"songId":"b1001","imgSrc":"imgRes/musicplayerhead1.jpg","personNum":"123","artist":"朴树","songName":"平凡之路","songTime":"5:02","des":"「华语」直到看见平凡才是唯一的答案"},
+        {"songId":"b1002","imgSrc":"imgRes/yhy.jpg","personNum":"456","artist":"田馥甄","songName":"小幸运","songTime":"4:26","des":"「华语」遇见你是生命最美好的事情"},
+        {"songId":"b1003","imgSrc":"imgRes/qzl.jpg","personNum":"789","artist":"权志龙","songName":"R.O.D","songTime":"3:59","des":"「华语」尊贵的女皇 你每个吻我也渴望珍藏"},
+        {"songId":"b1004","imgSrc":"imgRes/shili2.jpg","personNum":"111","artist":"周杰伦","songName":"明明就","songTime":"4:21","des":"「华语」你出现在我诗的每一页"},
+        {"songId":"b1005","imgSrc":"imgRes/cyx.jpg","personNum":"222","artist":"陈奕迅","songName":"浮夸","songTime":"4:44","des":"「华语」你当我是浮夸吧夸张只因我很怕"},
+        {"songId":"b1006","imgSrc":"imgRes/beyond.jpg","personNum":"333","artist":"beyond","songName":"光辉岁月","songTime":"4:59","des":"「华语」钟声响起归家的讯号"},
+        {"songId":"b1007","imgSrc":"imgRes/zhouhui.jpg","personNum":"444","artist":"beyond","songName":"海阔天空","songTime":"4:00","des":"「华语」远处的钟声回荡在雨里"},
+        {"songId":"b1008","imgSrc":"imgRes/gala.jpg","personNum":"555","artist":"Gala","songName":"追梦赤子心","songTime":"5:20","des":"「华语」向前跑 迎着冷眼和嘲笑"}
+    ],
+
+    "newAlbum":[
+        {"songId":"c1001","imgSrc":"imgRes/new1.jpg","albumName":"后期专辑名1","artistName":"后期歌手名1"},
+        {"songId":"c1002","imgSrc":"imgRes/new2.jpg","albumName":"后期专辑名2","artistName":"后期歌手名2"},
+        {"songId":"c1003","imgSrc":"imgRes/new3.jpg","albumName":"后期专辑名3","artistName":"后期歌手名3"},
+        {"songId":"c1004","imgSrc":"imgRes/new1.jpg","albumName":"后期专辑名4","artistName":"后期歌手名4"},
+        {"songId":"c1005","imgSrc":"imgRes/new2.jpg","albumName":"后期专辑名5","artistName":"后期歌手名5"},
+        {"songId":"c1006","imgSrc":"imgRes/new3.jpg","albumName":"后期专辑名6","artistName":"后期歌手名6"},
+        {"songId":"c1007","imgSrc":"imgRes/new1.jpg","albumName":"后期专辑名7","artistName":"后期歌手名7"},
+        {"songId":"c1008","imgSrc":"imgRes/new2.jpg","albumName":"后期专辑名8","artistName":"后期歌手名8"},
+        {"songId":"c1009","imgSrc":"imgRes/new3.jpg","albumName":"后期专辑名9","artistName":"后期歌手名9"},
+        {"songId":"c1010","imgSrc":"imgRes/new1.jpg","albumName":"后期专辑名0","artistName":"后期歌手名0"}
+    ],
+
+    "enterSinger":[
+        {"songId":"d1001","imgSrc":"imgRes/singer1.jpg","enterSingerName":"马頔麻油叶","enterSingerDes":"民谣音乐人"},
+        {"songId":"d1002","imgSrc":"imgRes/singer1.jpg","enterSingerName":"随便来","enterSingerDes":"民谣音乐人"},
+        {"songId":"d1003","imgSrc":"imgRes/singer1.jpg","enterSingerName":"随便来","enterSingerDes":"民谣音乐人"},
+        {"songId":"d1004","imgSrc":"imgRes/singer1.jpg","enterSingerName":"随便来","enterSingerDes":"民谣音乐人"},
+        {"songId":"d1005","imgSrc":"imgRes/singer1.jpg","enterSingerName":"随便来","enterSingerDes":"民谣音乐人"}
+    ],
+
+    "hotDJ":[
+        {"songId":"e1001","imgSrc":"imgRes/hotdj1.jpg","hotDJName":"DJ晓苏","hotDJDes":"独立DJ，CRI环球旅游广播特邀DJ"},
+        {"songId":"e1002","imgSrc":"imgRes/hotdj1.jpg","hotDJName":"后期随便写","hotDJDes":"独立DJ，CRI环球旅游广播特邀DJ"},
+        {"songId":"e1003","imgSrc":"imgRes/hotdj1.jpg","hotDJName":"后期随便写","hotDJDes":"独立DJ，CRI环球旅游广播特邀DJ"},
+        {"songId":"e1004","imgSrc":"imgRes/hotdj1.jpg","hotDJName":"后期随便写","hotDJDes":"独立DJ，CRI环球旅游广播特邀DJ"},
+        {"songId":"e1005","imgSrc":"imgRes/hotdj1.jpg","hotDJName":"后期随便写","hotDJDes":"独立DJ，CRI环球旅游广播特邀DJ"}
+    ]
+}

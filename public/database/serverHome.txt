@@ -1,0 +1,12 @@
+{
+    "viewDetails":[
+        {"problemTitle":"音乐无法播放","solveContent":"重启一下就好了,重启一下就好了,重启一下就好了。"},
+        {"problemTitle":"忘记登录密码","solveContent":"重启两下就好了。"},
+        {"problemTitle":"音乐还是无法播放","solveContent":"换个浏览器。"}
+
+    ]
+
+
+
+
+}

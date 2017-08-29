@@ -1,0 +1,599 @@
+.nav .one{
+    background:none;
+}
+
+.nav .one a{
+    background:none;
+}
+
+.nav .two{
+    background: url("../frameImg/topbar.png");
+    background-position: left -268px;
+}
+
+.nav .two a{
+    background: url("../frameImg/topbar.png");
+    background-position: right -268px;
+}
+
+.topListContent{
+    width:980px;
+    min-height: 800px;
+    margin: 0 auto;
+    border-left: solid 1px #d3d3d3;
+    border-right: solid 1px #d3d3d3;
+    background: url("../frameImg/wrap3.png") repeat-y center 0;
+}
+
+.topListContent:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.topListContentLeft{
+    width: 240px;
+    min-height: 800px;
+    float: left;
+}
+
+.topListLeftWrap{
+    margin-top: 40px;
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topListLeftWrap h3{
+    padding: 0 10px 12px 15px;
+    font-size: 14px;
+    color: #000;
+}
+
+.topListLeftWrap h3:nth-of-type(2){
+    margin-top: 20px;
+}
+
+.topListLeftWrap li{
+    height: 42px;
+    padding: 10px 0 10px 20px;
+    cursor: pointer;
+}
+
+.topListChecked{
+    background: #e6e6e6;
+}
+
+.topListUnChecked{
+    background:#f9f9f9;
+}
+
+.topListLeftWrap li:hover{
+    background: #f4f2f2;
+}
+
+.topListLeftWrap .item{
+    padding-left: 50px;
+}
+
+.topListLeftWrap .itemLeft{
+    display: inline;
+    float: left;
+    margin: -1px 0 0 -50px;
+    overflow: hidden;
+    width: 40px;
+}
+
+.item .topName{
+    width: 150px;
+    overflow: hidden;
+    margin: 2px 0 8px 0;
+}
+
+.item .topName a{
+    color: #000;
+    vertical-align: middle;
+}
+
+.item .update{
+    color: #999;
+}
+
+.topListContentRight{
+    width:740px;
+    min-height: 800px;
+    float: right;
+    padding-bottom: 50px;
+}
+
+.topListRightWrap{
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topListTopWrap{
+    padding: 40px;
+}
+
+.topListInfo:after{
+    clear: both;
+    content: '.';
+    display: block;
+    visibility: hidden;
+}
+
+.topListInfoLeft{
+    width:150px;
+    height:150px;
+    float: left;
+    display: inline;
+    position: relative;
+    margin: 0 -220px 0 0;
+    padding: 3px;
+    border: 1px solid #ccc;
+}
+
+.topListInfoLeft img{
+    width:150px;
+    height:150px;
+}
+
+.topListInfoRight{
+    width:100%;
+    float: right;
+}
+
+.topListInfoRightWrap{
+    margin-left: 187px;
+}
+
+.topListInfoRightTitle{
+    margin: 16px 0 4px;
+    line-height: 24px;
+}
+
+.topListInfoRightTitle h3{
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.topListInfoRightUpdate{
+    margin: 0 0 20px;
+    line-height: 35px;
+}
+
+.topListInfoRightUpdate i{
+    float: left;
+    margin: 9px 0 0 3px;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: url("../frameImg/icon.png") no-repeat;
+    background-position: -18px -682px;
+}
+
+.topListInfoRightUpdate span:nth-of-type(1){
+    margin-left: 5px;
+    color: #666;
+}
+
+.topListInfoRightUpdate span:nth-of-type(2){
+    color: #999;
+}
+
+.topListInfoRightBtn{
+    margin-bottom: 25px;
+    margin-right: -10px;
+}
+
+.topListInfoRightBtn a{
+    display: inline-block;
+    min-width: 23px;
+    height: 31px;
+    line-height: 31px;
+    float: left;
+    color: #fff;
+    padding: 0 5px 0 0;
+    text-align: center;
+    background: url("../frameImg/button2.png") no-repeat;
+}
+
+.topListInfoRightBtn span{
+    float: left;
+    height: 31px;
+    line-height: 30px;
+    min-width: 23px;
+    padding:0 2px 0 28px;
+    background: url("../frameImg/button2.png") no-repeat;
+}
+
+/*a:nth-of-type(1):播放*/
+.topListInfoRightBtn .playBtn{
+    background-position: right -428px;
+}
+
+.topListInfoRightBtn .playBtn:hover{
+    background-position: right -510px;
+}
+
+.topListInfoRightBtn .playBtn span{
+    padding: 0 7px 0 8px;
+    background: url("../frameImg/button2.png") no-repeat;
+    background-position: 0 -387px;
+}
+
+.topListInfoRightBtn .playBtn span:hover{
+    background-position: 0 -469px;
+}
+
+.topListInfoRightBtn .playBtn em{
+    float: left;
+    width: 20px;
+    height: 18px;
+    margin: 6px 2px 2px 0;
+    background: url("../frameImg/button2.png") no-repeat;
+    background-position: 0 -1622px;
+}
+
+.topListInfoRightBtn .playBtn span:hover em{
+    background-position: -28px -1622px;
+}
+
+/*a:nth-of-type(2):添加到播放列表*/
+.topListInfoRightBtn .addPlayList{
+    margin:0 5px 0 -3px;
+    width: 31px;
+    background-position: 0 -1588px;
+}
+
+.topListInfoRightBtn .addPlayList:hover{
+    background-position: -40px -1588px;
+}
+
+/*a:nth-of-type(3):收藏*/
+.topListInfoRightBtn .collectBtn{
+    margin-right: 6px;
+    background-position: right -1020px;
+    font-family: serif;
+    color: #333;
+}
+
+.topListInfoRightBtn .collectBtn:hover{
+    background-position: right -1106px;
+}
+
+.topListInfoRightBtn .collectBtn span{
+    background-position: 0 -977px;
+}
+
+.topListInfoRightBtn .collectBtn span:hover{
+    background-position: 0 -1063px;
+}
+
+/*a:nth-of-type(4):分享*/
+.topListInfoRightBtn .shareBtn{
+    margin-right: 6px;
+    background-position: right -1020px;
+    font-family:serif;
+    color: #333;
+}
+
+.topListInfoRightBtn .shareBtn:hover{
+    background-position: right -1106px;
+}
+
+.topListInfoRightBtn .shareBtn span{
+    background-position: 0 -1225px;
+}
+
+.topListInfoRightBtn .shareBtn span:hover{
+    background-position: 0 -1268px;
+}
+
+/*a:nth-of-type(5):下载*/
+.topListInfoRightBtn .downloadBtn{
+    margin-right: 6px;
+    background-position: right -1020px;
+    color: #333;
+}
+
+.topListInfoRightBtn .downloadBtn:hover{
+    background-position: right -1106px;
+}
+
+.topListInfoRightBtn .downloadBtn span{
+    background-position: 0 -2761px;
+}
+
+.topListInfoRightBtn .downloadBtn span:hover{
+    background-position: 0 -2805px;
+}
+
+/*a:nth-of-type(6):评论*/
+.topListInfoRightBtn .commentBtn{
+    background-position: right -1020px;
+    font-family: serif;
+    color: #333;
+}
+
+.topListInfoRightBtn .commentBtn:hover{
+    background-position: right -1106px;
+}
+
+.topListInfoRightBtn .commentBtn span{
+    background-position: 0 -1465px;
+}
+
+.topListInfoRightBtn .commentBtn span:hover{
+    background-position: 0 -1508px;
+}
+
+.topListBodyWrap{
+    padding: 0 30px 40px 40px;
+}
+
+.topListBodyTitle{
+    height: 33px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+.topListBodyTitle h3{
+    font-size: 20px;
+    line-height: 28px;
+    float: left;
+    font-weight: normal;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.topListBodyTitle .songNum{
+    font-weight: bold;
+    color: #c20c0c;
+}
+
+.topListBodyTitle .songTitle{
+    margin: 9px 0 0 20px;
+    color: #666;
+    float: left;
+}
+
+.topListBodyTitle .playCount{
+    margin-top: 5px;
+    float: right;
+    color: #666;
+}
+
+.topListBodyTitle .playCount strong{
+    color: #c20c0c;
+}
+
+.topListSong_list{
+    margin-bottom: 40px;
+}
+
+.topListSong_list table{
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.topListSong_list thead th{
+    height: 38px;
+    color: #666;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 10px;
+    background: url("../frameImg/table.png") repeat-x;
+    background-position: 0 0;
+}
+
+.topListSong_list thead .th1{
+    width: 77px;
+}
+
+.topListSong_list thead .thTitle{
+    color: #666;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+.topListSong_list thead span{
+    display: inline-block;
+    height: 18px;
+    padding: 8px 10px;
+    margin-left: -20px;
+    background: url("../frameImg/table.png") no-repeat;
+    background-position: 0 -56px;
+}
+
+.topListSong_list thead .thTime{
+    width: 81px;
+}
+
+.topListSong_list thead .thSinger{
+    width: 14%;
+}
+
+.topListSong_list .topOne td{
+    padding: 6px 5px;
+    line-height: 18px;
+    text-align: left;
+}
+
+.topListSong_list .topOne{
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.topListSong_list .topOne:hover{
+    background: #f7f7f7;
+    cursor: pointer;
+}
+
+.topListSong_list .topOne td .tableSongNth{
+    float: left;
+    width: 25px;
+    text-align: center;
+    margin-left: 5px;
+    line-height: 18px;
+    color: #999;
+}
+
+.topListSong_list .topOne td i{
+    float: right;
+    margin-right: 20px;
+    width: 16px;
+    height: 17px;
+    display: block;
+    background: url("../frameImg/icon.png") no-repeat;
+    background-position: -67px -283px;
+}
+
+.topListSong_list .topOne .rank{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.topListSong_list .rank .topOneBody{
+    float: left;
+    width: 100%;
+}
+
+.topListSong_list .rank img{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 14px;
+}
+
+.topListSong_list .topOne .rank .tablePlayTopList{
+    width: 17px;
+    height: 17px;
+    float: left;
+    margin: 17px 8px 0 0;
+    background: url("../frameImg/table.png") no-repeat;
+    background-position: 0 -103px;
+    cursor: pointer;
+}
+
+.topListSong_list .rank .tablePlayTopList:hover{
+    background-position: -20px -128px;
+}
+
+.topListSong_list .topOne .rank .topOneInfo{
+    height: 18px;
+    margin: 16px 20px 0 0;
+}
+
+.topListSong_list .rank .topOneInfo .tableTxt{
+    max-width: 75%;
+    height: 20px;
+    position: relative;
+    display: inline-block;
+    padding-right: 25px;
+    margin-right: -25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.topListSong_list .topOneInfo .tableTxt .tableSongName{
+    color:#333;
+}
+
+.topListSong_list .topOneInfo .tableTxt .tableSongInfo{
+    color: #aeaeae;
+}
+
+.topListSong_list .topOne .tableSongDuration{
+    color: #666;
+}
+
+.topListSong_list .topOne .tableSongShow{
+    float: left;
+    display: none;
+}
+
+.topListSong_list .topOne:hover .tableSongShow{
+    display: block;
+}
+
+.topListSong_list .topOne:hover .tableSongDuration{
+    display: none;
+}
+
+.topListSong_list .topOne .tableSongShow .tableSongAdd{
+    width: 14px;
+    height: 16px;
+    display: inline-block;
+    float: left;
+    margin-top: 2px;
+    background: url("../frameImg/playlist.png") no-repeat;
+    background-position: -80px -20px;
+}
+
+.topListSong_list .topOne .tableSongShow .tableSongAdd:hover{
+    background: url("../frameImg/playlist.png") no-repeat;
+    background-position: -80px 0;
+}
+
+.topListSong_list .topOne .tableSongShow .tableSongFav{
+    float: left;
+    width: 18px;
+    height: 16px;
+    margin: 2px 0 0 7px;
+    background: url("../frameImg/table.png") no-repeat;
+    background-position: 0 -174px;
+}
+
+.topListSong_list .topOne .tableSongShow .tableSongFav:hover{
+    background-position: -20px -174px;
+}
+
+.topListSong_list .topOne .tableSongShow .tableSongDown{
+    float: left;
+    width: 18px;
+    height: 16px;
+    margin: 2px 0 0 7px;
+    background: url("../frameImg/table.png") no-repeat;
+    background-position: -81px -174px;
+}
+
+.topListSong_list .topOne .tableSongShow .tableSongDown:hover{
+    background-position: -104px -174px;
+}
+
+.topListCommentTitle{
+    height: 33px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+.topListCommentTitle strong{
+    color: #c20c0c;
+}
+
+.topListCommentTitle h3{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: normal;
+    float: left;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.topListCommentTitle .commentTitle{
+    margin: 9px 0 0 20px;
+    float: left;
+    color: #666;
+}
+
+/*add new*/
+
+.tableSongTime,.tableSinger{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

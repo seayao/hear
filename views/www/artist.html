@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="css/artist.css">
+<div class="artistContent">
+    <div class="artistContentLeft">
+        <div class="artistContentLeftWrap">
+            <h2 class="LeftWrapTitle">推荐</h2>
+            <ul>
+                <li class="hotArtistItem" data-type="hot"><a class="checked" href="javascript:;">热门歌手</a></li>
+                <li class="newArtistItem" data-type="new"><a class="unChecked" href="javascript:;">最新歌手</a></li>
+            </ul>
+            <div class="artistNav">
+                <h2 class="LeftWrapTitle">华语</h2>
+                <ul data-category="华语">
+                    <li data-type="华语男歌手"><a class="unChecked" href="javascript:;">华语男歌手</a></li>
+                    <li data-type="华语女歌手"><a class="unChecked" href="javascript:;">华语女歌手</a></li>
+                    <li data-type="华语组合/乐队"><a class="unChecked" href="javascript:;">华语组合/乐队</a></li>
+                </ul>
+            </div>
+            <div class="artistNav">
+                <h2 class="LeftWrapTitle">欧美</h2>
+                <ul data-category="欧美">
+                    <li data-type="欧美男歌手"><a class="unChecked" href="javascript:;">欧美男歌手</a></li>
+                    <li data-type="欧美女歌手"><a class="unChecked" href="javascript:;">欧美女歌手</a></li>
+                    <li data-type="欧美组合/乐队"><a class="unChecked" href="javascript:;">欧美组合/乐队</a></li>
+                </ul>
+            </div>
+            <div class="artistNav">
+                <h2 class="LeftWrapTitle">日本</h2>
+                <ul data-category="日本">
+                    <li data-type="日本男歌手"><a class="unChecked" href="javascript:;">日本男歌手</a></li>
+                    <li data-type="日本女歌手"><a class="unChecked" href="javascript:;">日本女歌手</a></li>
+                    <li data-type="日本组合/乐队"><a class="unChecked" href="javascript:;">日本组合/乐队</a></li>
+                </ul>
+            </div>
+            <div class="artistNav">
+                <h2 class="LeftWrapTitle">韩国</h2>
+                <ul data-category="韩国">
+                    <li data-type="韩国男歌手"><a class="unChecked" href="javascript:;">韩国男歌手</a></li>
+                    <li data-type="韩国女歌手"><a class="unChecked" href="javascript:;">韩国女歌手</a></li>
+                    <li data-type="韩国组合/乐队"><a class="unChecked" href="javascript:;">韩国组合/乐队</a></li>
+                </ul>
+            </div>
+            <div class="artistNav">
+                <h2 class="LeftWrapTitle">其他</h2>
+                <ul data-category="其他">
+                    <li data-type="其他男歌手"><a class="unChecked" href="javascript:;">其他男歌手</a></li>
+                    <li data-type="其他女歌手"><a class="unChecked" href="javascript:;">其他女歌手</a></li>
+                    <li data-type="其他组合/乐队"><a class="unChecked" href="javascript:;">其他组合/乐队</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> <!--artistContentLeft -->
+
+    <div class="artistContentRight">
+        <div class="artistContentRightWrap">
+            <div class="artistListWrap">
+                <div class="artistTop">
+                    <span class="artistTitle">推荐歌手</span>
+                </div>
+                <div class="artistLists recArtistAjax">
+                    <ul>
+                        <li ng-repeat="v in recArtist" ui-sref="tabs.artistDetails({artistId:v._id})">
+                            <a class="artistImgHref" href="javascript:;">
+                                <img ng-src="{{v.artistImg}}" alt="加载失败">
+                            </a>
+                            <a href="javascript:;">{{v.artistName}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- artistListWrap of end -->
+
+            <div class="artistListWrap">
+                <div class="artistTop">
+                    <span class="artistTitle hotArtistTitle">热门歌手</span>
+                </div>
+                <div class="artistLists hotArtistAjax">
+                    <ul class="publicArtist">
+                        <li ng-repeat="v in publicArtist" ui-sref="tabs.artistDetails({artistId:v._id})">
+                            <a class="artistImgHref" href="javascript:;">
+                                <img ng-src="{{v.artistImg}}" alt="加载失败">
+                            </a>
+                            <a href="javascript:;">{{v.artistName}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- artistListWrap of end -->
+        </div> <!--artistContentRightWrap of end -->
+    </div> <!--artistContentRight of end -->
+</div> <!-- artistContent of end -->
+<script src="js/artist.js"></script>

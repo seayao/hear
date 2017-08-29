@@ -1,0 +1,155 @@
+<link rel="stylesheet" href="css/userDetails.css">
+<div class="redLine">
+</div>
+
+<div class="userContent">
+    <div class="userContentWrap">
+        <div class="userInfo f-cb">
+            <div class="userHead">
+                <img src="frameImg/default_avatar.jpg" alt="加载失败">
+            </div>
+            <div class="userInfoRight">
+                <div class="userDes f-cb">
+                    <h2 class="userName">
+                        <span class="userNameTitle">该用户未设置昵称</span>
+                        <i class="userSex"></i>
+                    </h2>
+                </div>
+
+                <ul class="userMoreInfo f-cb">
+                    <li>
+                        <a href="javascript:;">
+                            <strong ng-repeat="(key,val) in otherUserCollectNum">{{val}}</strong>
+                            <span class="heOrHerFav"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;">
+                            <strong ng-repeat="(key,val) in otherUserUploadSongNum">{{val}}</strong>
+                            <span>上传的歌曲</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;">
+                            <strong ng-repeat="(key,val) in otherUserUploadArtistNum">{{val}}</strong>
+                            <span>上传的歌手</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="latestLogin">
+                    <span class="latestLoginTitle">注册时间：</span>
+                    <span class="latestLoginTime"></span>
+                </div>
+
+                <div class="socialContact">
+                    <span class="socialContactTitle">社交网络：</span>
+                    <span class="socialContactInfo">暂无</span>
+                    <span class="socialContactType"></span>
+                </div>
+
+                <div class="userSign">
+                    <span class="userSignTitle">个性签名：</span>
+                    <span class="userSignContent">暂无</span>
+                </div>
+            </div>
+        </div> <!-- userInfo of end -->
+        <!--收藏歌曲设计-->
+        <div class="userFavTitle f-cb">
+            <h3 class="otherFavShow"></h3>
+            <h4 class="userFavNum" ng-repeat="(key,val) in otherUserCollectNum">
+                <span class="numShow">{{val}}</span>
+                首
+            </h4>
+            <div class="userFavRight f-cb">
+                <i class="userFavTip" title="提示"></i>
+                <div class="iconHoverTip">
+                    <p>数据可能会有些延迟，刷新页面即可。</p>
+                </div>
+            </div>
+        </div>
+        <div class="userFavSongList">
+            <ul>
+                <li ng-repeat="v in otherUserCollect track by $index">
+                    <div class="userFavSongHead" data-songId="{{v.beCollectId}}" data-songName="{{v.beCollectSongName}}" data-artist="{{v.beCollectArtist}}" data-songImg="{{v.beCollectImg}}" data-mp3="{{v.beCollectMp3}}">
+                        <span class="userFavSongHeadNum">{{$index + 1}}.</span>
+                        <span class="userDetailsPlay"></span>
+                    </div>
+                    <div class="userFavSongMsg" title="点击查看详情" ui-sref="tabs.songDetails({songId:v.beCollectId})">
+                        <span class="userFavSongName" title="歌名">{{v.beCollectSongName}}</span>
+                        <em>-</em>
+                        <span class="userFavSongArtist" title="歌手">{{v.beCollectArtist}}</span>
+                    </div>
+                    <div class="userFavSongTime">
+                        <span>收藏时间：</span>
+                        <span>{{v.createTime}}</span>
+                        <!--<span class="publicBtn editBtn">修改</span>-->
+                        <!--<span class="publicBtn delBtn">删除</span>-->
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--上传的歌曲-->
+        <div class="userFavTitle f-cb">
+            <h3>上传的歌曲</h3>
+            <h4 class="userFavNum" ng-repeat="(key,val) in otherUserUploadSongNum">
+                <span class="numShow">{{val}}</span>
+                首
+            </h4>
+        </div>
+        <div class="userFavSongList">
+            <ul>
+                <li ng-repeat="v in otherUserUploadSong track by $index">
+                    <div class="userFavSongHead" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                        <span class="userFavSongHeadNum">{{$index + 1}}.</span>
+                        <span class="userDetailsPlay"></span>
+                    </div>
+                    <div class="userFavSongMsg" title="点击查看详情" ui-sref="tabs.songDetails({songId:v._id})">
+                        <span class="userFavSongName" title="歌名">{{v.songName}}</span>
+                        <em>-</em>
+                        <span class="userFavSongArtist" title="歌手">{{v.artist}}</span>
+                    </div>
+                    <div class="userFavSongTime">
+                        <span>上传时间：</span>
+                        <span>{{v.uploadTime}}</span>
+                        <!--<span class="publicBtn editBtn">修改</span>-->
+                        <!--<span class="publicBtn delBtn">删除</span>-->
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--上传的歌手-->
+        <div class="userFavTitle f-cb">
+            <h3>上传的歌手</h3>
+            <h4 class="userFavNum" ng-repeat="(key,val) in otherUserUploadArtistNum">
+                <span class="numShow">{{val}}</span>
+                位
+            </h4>
+        </div>
+        <div class="userFavSongList">
+            <ul>
+                <li ng-repeat="v in otherUserUploadArtist track by $index">
+                    <div class="userFavSongHead userUploadArtistHead">
+                        <span class="userFavSongHeadNum userUploadArtistNum">{{$index + 1}}.</span>
+                    </div>
+                    <div class="userFavSongMsg userUploadArtistMsg" title="点击查看详情" ui-sref="tabs.artistDetails({artistId:v._id})">
+                        <span class="userFavSongName userUploadArtist" title="歌手">{{v.artistName}}</span>
+                        <em>-</em>
+                        <span class="userFavSongArtist userUploadArtistDes" title="简介">{{v.artistDes}}</span>
+                    </div>
+                    <div class="userFavSongTime">
+                        <span>上传时间：</span>
+                        <span>{{v.uploadTime}}</span>
+                        <!--<span class="publicBtn editBtn">修改</span>-->
+                        <!--<span class="publicBtn delBtn">删除</span>-->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- userContentWrap of end -->
+</div>
+<script src="js/userDetails.js"></script>

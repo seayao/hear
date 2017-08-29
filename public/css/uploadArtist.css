@@ -1,0 +1,264 @@
+sup{
+    margin-right: 5px;
+    color: #e33232;
+}
+
+.nav{
+    display: none;
+}
+
+.redLine{
+    width: 100%;
+    height: 4px;
+    background: #c70c0c;
+    box-shadow: 0 2px 2px #afafaf;
+}
+
+.uploadSongContent{
+    width: 980px;
+    min-height: 700px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    background-color: #fff;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+}
+
+.f-cb:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.uploadSongContentWrap{
+    padding: 40px;
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.uploadSongTitle{
+    height: 40px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+.uploadSongTitle h3{
+    font-size: 24px;
+    font-weight: normal;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.userSettingUl{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background: url("../frameImg/table.png") repeat-x;
+    background-position: 0 0;
+}
+
+.userSettingUl li{
+    height: 35px;
+    border-right: 1px solid #ccc;
+    float: left;
+    cursor: pointer;
+}
+
+.upLoadArtistTitle{
+    background: #fff;
+}
+
+.userSettingUl li:hover{
+    background: #fff;
+}
+
+.userSettingUl li>em{
+    height: 33px;
+    width: 134px;
+    padding: 2px 2px 0 0;
+    line-height: 33px;
+    font-size: 14px;
+    font-style: normal;
+    display: inline-block;
+    text-align: center;
+}
+
+.userBaseMsg{
+    margin-top: 30px;
+}
+
+.userBaseMsgLeft{
+    width: 360px;
+    min-height: 300px;
+    margin-right:30px;
+    float: left;
+}
+
+.userBaseMsgLeft label{
+    line-height: 32px;
+    text-align: right;
+    display: inline-block;
+}
+
+.artistNickDiv,.sexDiv,.artistTypeDiv,.artistDesDiv,.artistSongDiv,.fameDiv,.otherDiv{
+    margin-top: 20px;
+}
+
+.sexDiv #male, #female{
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.artistInput,.artistNickInput,.otherInput{
+    width: 200px;
+    height: 19px;
+    padding: 5px 6px 6px;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+    line-height: 19px;
+}
+
+.artistTypeDiv select{
+    height: 30px;
+    margin-right: 10px;
+}
+
+#textAreaSongDes:focus,#textAreaArtistDes:focus,#textAreaFameDes:focus{
+    outline: none;
+}
+
+#textAreaArtistDes,#textAreaSongDes,#textAreaFameDes{
+    width:330px;
+    height: 135px;
+    padding: 5px 6px 6px;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+    line-height: 19px;
+    resize: none;
+}
+
+.publicDiv p{
+    color: #666;
+}
+
+.publicDiv .desLimit{
+    font-weight: 700;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Constantia,Georgia,Arial, Helvetica, sans-serif;
+    color: #e33232;
+}
+
+.userBaseMsgRight{
+    width: 500px;
+    float: left;
+}
+
+.userId,.userPhoneHide,.userNickName,.userHead{
+    display: none;
+}
+
+.songImgNatureDiv{
+    float: left;
+    width: 140px;
+    height: 140px;
+    position: relative;
+}
+
+.songImgNature{
+    width: 140px;
+    height: 140px;
+}
+
+.changeImgCover{
+    width: 140px;
+    height: 26px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #8e8e8e;
+    opacity: 0.8;
+}
+
+.uploadSongBtn{
+    width: 140px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.uploadSongBtn:hover{
+    text-decoration: underline;
+}
+
+.uploadSongImg input[type='file']{
+    display: none;
+}
+
+.uploadSongImgPreview{
+    margin-top: 40px;
+    display: none;
+}
+
+.uploadSongImgPreviewTitle{
+    margin-bottom: 10px;
+}
+
+.songImgLgSizeDiv{
+    width: 180px;
+    height: 220px;
+    float: left;
+}
+
+.songImgLgSize{
+    width: 180px;
+    height: 180px;
+}
+
+.songImgSmSizeDiv{
+    width: 180px;
+    height: 220px;
+    margin-left: 60px;
+    float: left;
+}
+
+.songImgSmSize{
+    width: 40px;
+    height: 40px;
+    margin-top:140px;
+}
+
+.songImgLgSizeDes,.songImgSmSizeDes{
+    margin-top: 10px;
+    color: #999;
+}
+
+.saveArtistDiv{
+    position: absolute;
+    bottom: -20px;
+}
+
+.saveArtistBtn{
+    width: 110px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px;
+    background:#2e7ecb;
+    color: #fff;
+}
+
+.saveArtistBtn:hover{
+    background:#448fd6;
+}
+
+/*add new*/
+.bigType,.smallType{
+    display: none;
+}

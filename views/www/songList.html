@@ -1,0 +1,249 @@
+<link rel="stylesheet" href="css/songList.css">
+<!--网页主体部分-->
+<div class="songListsContent">
+    <div class="songListsWarp">
+        <div class="songListsTop">
+            <span class="songListsTitle">全部风格</span>
+            <a class="songListsClassify" href="javascript:;">选择分类▼</a>
+            <div class="songListsOrder">
+                <a class="songListsHot" href="javascript:;">热门</a>
+                <a class="songListsNew" href="javascript:;">最新</a>
+            </div>
+        </div>
+
+        <div class="hotRecommend">
+            <ul>
+                <!--ajax加载-->
+                <li ng-repeat="v in songList">
+                    <div class="imgAction">
+                        <img ng-src="{{v.imgName}}" ui-sref="tabs.songDetails({songId:v._id})" alt="加载失败">
+                        <div class="bottomPlay" data-songId="{{v._id}}" data-songName="{{v.songName}}" data-artist="{{v.artist}}" data-songImg="{{v.imgName}}" data-mp3="{{v.mp3File}}">
+                            <span class="iconPlaySongList" title="播放"></span>
+                            <span class="musicIco" title="听众人数"></span>
+                            <span class="personNum">{{v.listener}}</span>
+                        </div>
+                    </div>
+                    <p title="{{v.aWord}}">
+                        <a href="javascript:;">{{v.aWord}}</a>
+                    </p>
+                    <p ng-if="v.userNickName == null">
+                        <label>by</label>
+                        <span class="userName" ui-sref="tabs.userDetails({userId:v.userId})">匿名用户</span>
+                    </p>
+                    <p ng-if="v.userNickName">
+                        <label>by</label>
+                        <span class="userName" ui-sref="tabs.userDetails({userId:v.userId})">{{v.userNickName}}</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!-- 翻页制作 -->
+        <div class="songListsPager">
+            <ul class="songListsP f-cb">
+                <li><a class="previous" href="javascript:;">上一页</a></li>
+                <li><a class="numPage num1Page" href="javascript:;">1</a></li>
+                <li><a class="numPage" href="javascript:;">2</a></li>
+                <li><a class="numPage" href="javascript:;">3</a></li>
+                <li><a class="numPage" href="javascript:;">4</a></li>
+                <li><a class="numPage" href="javascript:;">5</a></li>
+                <li><a class="next" href="javascript:;">下一页</a></li>
+            </ul>
+        </div>
+        <!-- 翻页制作结束 -->
+    </div> <!--songListsWarp of end-->
+</div>
+<!--点击选择分类时的样式设计-->
+<div class="cateListBox">
+    <div class="cateListBoxHd">
+        <i class="cateListArrow"></i>
+        <a class="allStyle" href="javascript:;">全部风格</a>
+    </div>
+    <div class="cateListBoxBd">
+        <dl>
+            <dt>
+                <i class="langueIco"></i>
+                <span class="langueWord">语种</span>
+            </dt>
+            <dd data-bigType="语种">
+                <a href="javascript:;">华语</a>
+                <span class="line">|</span>
+                <a href="javascript:;">欧美</a>
+                <span class="line">|</span>
+                <a href="javascript:;">日语</a>
+                <span class="line">|</span>
+                <a href="javascript:;">韩语</a>
+                <span class="line">|</span>
+                <a href="javascript:;">粤语</a>
+                <span class="line">|</span>
+                <a href="javascript:;">小语种</a>
+                <span class="line">|</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <i class="langueIco styleIco"></i>
+                <span class="langueWord">风格</span>
+            </dt>
+            <dd data-bigType="风格">
+                <a href="javascript:;">流行</a>
+                <span class="line">|</span>
+                <a href="javascript:;">摇滚</a>
+                <span class="line">|</span>
+                <a href="javascript:;">民谣</a>
+                <span class="line">|</span>
+                <a href="javascript:;">电子</a>
+                <span class="line">|</span>
+                <a href="javascript:;">舞曲</a>
+                <span class="line">|</span>
+                <a href="javascript:;">说唱</a>
+                <span class="line">|</span>
+                <a href="javascript:;">轻音乐</a>
+                <span class="line">|</span>
+                <a href="javascript:;">爵士</a>
+                <span class="line">|</span>
+                <a href="javascript:;">乡村</a>
+                <span class="line">|</span>
+                <a href="javascript:;">R&B/Soul</a>
+                <span class="line">|</span>
+                <a href="javascript:;">古典</a>
+                <span class="line">|</span>
+                <a href="javascript:;">民族</a>
+                <span class="line">|</span>
+                <a href="javascript:;">英伦</a>
+                <span class="line">|</span>
+                <a href="javascript:;">金属</a>
+                <span class="line">|</span>
+                <a href="javascript:;">朋克</a>
+                <span class="line">|</span>
+                <a href="javascript:;">蓝调</a>
+                <span class="line">|</span>
+                <a href="javascript:;">雷鬼</a>
+                <span class="line">|</span>
+                <a href="javascript:;">世界音乐</a>
+                <span class="line">|</span>
+                <a href="javascript:;">拉丁</a>
+                <span class="line">|</span>
+                <a href="javascript:;">另类/独立</a>
+                <span class="line">|</span>
+                <a href="javascript:;">New Age</a>
+                <span class="line">|</span>
+                <a href="javascript:;">古风</a>
+                <span class="line">|</span>
+                <a href="javascript:;">后摇</a>
+                <span class="line">|</span>
+                <a href="javascript:;">Bossa Nova</a>
+                <span class="line">|</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <i class="langueIco sceneIco"></i>
+                <span class="langueWord">场景</span>
+            </dt>
+            <dd data-bigType="场景">
+                <a href="javascript:;">清晨</a>
+                <span class="line">|</span>
+                <a href="javascript:;">夜晚</a>
+                <span class="line">|</span>
+                <a href="javascript:;">学习</a>
+                <span class="line">|</span>
+                <a href="javascript:;">工作</a>
+                <span class="line">|</span>
+                <a href="javascript:;">午休</a>
+                <span class="line">|</span>
+                <a href="javascript:;">下午茶</a>
+                <span class="line">|</span>
+                <a href="javascript:;">地铁</a>
+                <span class="line">|</span>
+                <a href="javascript:;">驾车</a>
+                <span class="line">|</span>
+                <a href="javascript:;">运动</a>
+                <span class="line">|</span>
+                <a href="javascript:;">旅行</a>
+                <span class="line">|</span>
+                <a href="javascript:;">散步</a>
+                <span class="line">|</span>
+                <a href="javascript:;">酒吧</a>
+                <span class="line">|</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <i class="langueIco emotionIco"></i>
+                <span class="langueWord">情感</span>
+            </dt>
+            <dd data-bigType="情感">
+                <a href="javascript:;">怀旧</a>
+                <span class="line">|</span>
+                <a href="javascript:;">清新</a>
+                <span class="line">|</span>
+                <a href="javascript:;">浪漫</a>
+                <span class="line">|</span>
+                <a href="javascript:;">性感</a>
+                <span class="line">|</span>
+                <a href="javascript:;">伤感</a>
+                <span class="line">|</span>
+                <a href="javascript:;">治愈</a>
+                <span class="line">|</span>
+                <a href="javascript:;">放松</a>
+                <span class="line">|</span>
+                <a href="javascript:;">孤独</a>
+                <span class="line">|</span>
+                <a href="javascript:;">感动</a>
+                <span class="line">|</span>
+                <a href="javascript:;">兴奋</a>
+                <span class="line">|</span>
+                <a href="javascript:;">快乐</a>
+                <span class="line">|</span>
+                <a href="javascript:;">安静</a>
+                <span class="line">|</span>
+                <a href="javascript:;">思念</a>
+                <span class="line">|</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <i class="langueIco themeIco"></i>
+                <span class="langueWord">主题</span>
+            </dt>
+            <dd data-bigType="主题">
+                <a href="javascript:;">影视原声</a>
+                <span class="line">|</span>
+                <a href="javascript:;">ACG</a>
+                <span class="line">|</span>
+                <a href="javascript:;">校园</a>
+                <span class="line">|</span>
+                <a href="javascript:;">游戏</a>
+                <span class="line">|</span>
+                <a href="javascript:;">70后</a>
+                <span class="line">|</span>
+                <a href="javascript:;">80后</a>
+                <span class="line">|</span>
+                <a href="javascript:;">90后</a>
+                <span class="line">|</span>
+                <a href="javascript:;">00后</a>
+                <span class="line">|</span>
+                <a href="javascript:;">网络歌曲</a>
+                <span class="line">|</span>
+                <a href="javascript:;">KTV</a>
+                <span class="line">|</span>
+                <a href="javascript:;">经典</a>
+                <span class="line">|</span>
+                <a href="javascript:;">翻唱</a>
+                <span class="line">|</span>
+                <a href="javascript:;">吉他</a>
+                <span class="line">|</span>
+                <a href="javascript:;">钢琴</a>
+                <span class="line">|</span>
+                <a href="javascript:;">器乐</a>
+                <span class="line">|</span>
+                <a href="javascript:;">儿童</a>
+                <span class="line">|</span>
+                <a href="javascript:;">榜单</a>
+                <span class="line">|</span>
+            </dd>
+        </dl>
+    </div>
+</div>
+<!--网页主体部分结束-->
+<script src="js/songList.js"></script>

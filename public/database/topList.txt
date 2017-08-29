@@ -1,0 +1,58 @@
+﻿{
+    "specialTopList":[
+        {"imgSrc":"frameImg/songxs1.jpg","topName":"音乐新歌榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs2.jpg","topName":"音乐飙升榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs3.jpg","topName":"原创音乐榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs4.jpg","topName":"音乐热度榜","updateTime":"暂不更新"}
+    ],
+
+    "worldTopList":[
+        {"imgSrc":"frameImg/songxs5.jpg","topName":"ACG音乐榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs6.jpg","topName":"古典音乐榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs7.jpg","topName":"电音榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs8.jpg","topName":"UK排行榜周榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs9.jpg","topName":"美国Billboard","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs10.jpg","topName":"Beatport全球电子舞曲榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs11.jpg","topName":"法国 NRJ Vos Hits 周榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs12.jpg","topName":"KTV唛榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs13.jpg","topName":"iTunes榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs14.jpg","topName":"日本Oricon周榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs15.jpg","topName":"韩国Melon排行榜周榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs16.jpg","topName":"韩国Melon原声周榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs17.jpg","topName":"韩国Mnet排行榜周榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs18.jpg","topName":"Hit FM Top榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs19.jpg","topName":"台湾Hito排行榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs20.jpg","topName":"中国TOP排行榜（港台榜）","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs21.jpg","topName":"中国TOP排行榜（内地榜）","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs22.jpg","topName":"香港电台中文歌曲龙虎榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs23.jpg","topName":"华语金曲榜","updateTime":"暂不更新"},
+        {"imgSrc":"frameImg/songxs24.jpg","topName":"中国嘻哈榜","updateTime":"暂不更新"}
+    ],
+
+    "topListNameMsg":[
+        {"imgSrc":"frameImg/songl1.jpg","topName":"音乐新歌榜"},
+        {"imgSrc":"frameImg/songl2.jpg","topName":"音乐飙升榜"},
+        {"imgSrc":"frameImg/songl3.jpg","topName":"原创音乐榜"},
+        {"imgSrc":"frameImg/songl4.jpg","topName":"音乐热度榜"},
+        {"imgSrc":"frameImg/songl5.jpg","topName":"ACG音乐榜"},
+        {"imgSrc":"frameImg/songl6.jpg","topName":"古典音乐榜"},
+        {"imgSrc":"frameImg/songl7.jpg","topName":"电音榜"},
+        {"imgSrc":"frameImg/songl8.jpg","topName":"UK排行榜周榜"},
+        {"imgSrc":"frameImg/songl9.jpg","topName":"美国Billboard"},
+        {"imgSrc":"frameImg/songl10.jpg","topName":"Beatport全球电子舞曲榜"},
+        {"imgSrc":"frameImg/songl11.jpg","topName":"法国 NRJ Vos Hits 周榜"},
+        {"imgSrc":"frameImg/songl12.jpg","topName":"KTV唛榜"},
+        {"imgSrc":"frameImg/songl13.jpg","topName":"iTunes榜"},
+        {"imgSrc":"frameImg/songl14.jpg","topName":"日本Oricon周榜"},
+        {"imgSrc":"frameImg/songl15.jpg","topName":"韩国Melon排行榜周榜"},
+        {"imgSrc":"frameImg/songl16.jpg","topName":"韩国Melon原声周榜"},
+        {"imgSrc":"frameImg/songl17.jpg","topName":"韩国Mnet排行榜周榜"},
+        {"imgSrc":"frameImg/songl18.jpg","topName":"Hit FM Top榜"},
+        {"imgSrc":"frameImg/songl19.jpg","topName":"台湾Hito排行榜"},
+        {"imgSrc":"frameImg/songl20.jpg","topName":"中国TOP排行榜（港台榜）"},
+        {"imgSrc":"frameImg/songl21.jpg","topName":"中国TOP排行榜（内地榜）"},
+        {"imgSrc":"frameImg/songl22.jpg","topName":"香港电台中文歌曲龙虎榜"},
+        {"imgSrc":"frameImg/songl23.jpg","topName":"华语金曲榜"},
+        {"imgSrc":"frameImg/songl24.jpg","topName":"中国嘻哈榜"}
+    ]
+}

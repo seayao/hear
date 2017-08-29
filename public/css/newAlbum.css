@@ -1,0 +1,179 @@
+.nav .one{
+    background:none;
+}
+
+.nav .one a{
+    background:none;
+}
+
+.nav .four{
+    background: url("../frameImg/topbar.png");
+    background-position: left -268px;
+}
+
+.nav .four a{
+    background: url("../frameImg/topbar.png");
+    background-position: right -268px;
+}
+
+.newAlbumContent{
+    width:980px;
+    min-height: 700px;
+    margin: 0 auto;
+    background: #fff;
+    border-left: solid 1px #d3d3d3;
+    border-right: solid 1px #d3d3d3;
+}
+
+.newAlbumContent:after{
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.newAlbumWarp{
+    padding: 40px;
+}
+
+.newAlbumWarp:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.newAlbumTop{
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+.newAlbumTitle{
+    font-size: 24px;
+    font-weight: normal;
+    color: #333;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.allNewAlbum .areaList{
+    display: inline-block;
+    font-size: 12px;
+    margin: 12px 0 0 20px;
+}
+
+.areaList a{
+    color: #666;
+}
+
+.areaList .line{
+    margin: 0 5px;
+    color: #c7c7c7;
+}
+
+.areaList a:hover{
+    text-decoration: underline;
+}
+
+.hotNewAlbum ul{
+    margin: 20px 0 0 -33px;
+    font-size: 12px;
+    color: #333;
+}
+
+.hotNewAlbum li{
+    width: 153px;
+    height: 178px;
+    display: inline-block;
+    float: left;
+    padding: 0 0 30px 33px;
+}
+
+.hotNewAlbum .albumDes{
+    width: 100%;
+    font-size: 14px;
+    margin: 8px 0 3px;
+    line-height: 1.4;
+}
+
+.albumDes a,.artistDes a{
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.artistDes a{
+    color: #666;
+}
+
+.albumDes a:hover,.artistDes a:hover{
+    text-decoration: underline;
+}
+
+.imgCover{
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+
+.imgCover .cdBg{
+    width: 153px;
+    height: 130px;
+    display: inline-block;
+    background:url("../frameImg/coverall.png")  no-repeat;
+    background-position: 0 -845px;
+}
+
+.imgCover .playIcon{
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    background: url("../frameImg/iconall.png") no-repeat;
+    background-position: 0 -140px;
+    display: none;
+}
+
+.imgCover:hover .playIcon{
+    display: block;
+}
+
+.playIcon:hover{
+    background: url("../frameImg/albumplayer.png");
+}
+
+.hotNewAlbum:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.loading{
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+.loaded{
+    width: 400px;
+    height: 34px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: rgba(176,10,10,.6);
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    display: none;
+}
+
+/*add new*/
+.imgCover .hotNewSongImg{
+    width: 130px;
+    height:130px;
+}

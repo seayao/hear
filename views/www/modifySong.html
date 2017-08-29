@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="css/modifySong.css">
+<div class="redLine">
+</div>
+
+<div class="uploadSongContent" ng-controller="modifySongController as cBox">
+    <div class="uploadSongContentWrap">
+        <div class="uploadSongTitle">
+            <h3>修改歌曲资料</h3>
+        </div>
+        <ul class="adminSettingList f-cb">
+            <li class="memberManageTitle">
+                <em>会员管理</em>
+            </li>
+            <li class="songManageTitle">
+                <em>歌曲管理</em>
+            </li>
+            <li class="artistManageTitle">
+                <em>歌手管理</em>
+            </li>
+            <li class="commentManageTitle">
+                <em>评论管理</em>
+            </li>
+            <li class="problemrManageTitle">
+                <em>问题管理</em>
+            </li>
+            <li class="backMyHomeTitle">
+                <em>我的主页</em>
+            </li>
+        </ul>
+        <div class="userBaseMsg f-cb">
+            <form action="" method="post" id="songInfoForm">
+                <div class="userBaseMsgLeft">
+                    <div class="uploaderInfo">
+                        <p><label>上传者：</label><span class="uploadUser"></span></p>
+                        <p><label>上传者昵称：</label><span class="uploadNick"></span></p>
+                        <p><label>收听人数：</label><span class="songListener"></span></p>
+                        <p><label>收藏人数：</label><span class="songCollect"></span></p>
+                        <p><label>上传时间：</label><span class="uploadTime"></span></p>
+                    </div>
+                    <div class="songNameDiv">
+                        <label><sup>*</sup>歌名：</label><input class="songNameInput" type="text" name="songName" placeholder="不超过16个字符" maxlength="16">
+                    </div>
+                    <div class="artistDiv">
+                        <label><sup>*</sup>歌手：</label><input class="artistInput" type="text" name="artist" placeholder="不超过16个字符" maxlength="16">
+                    </div>
+                    <div class="toplistTypeDiv">
+                        <label><sup>*</sup>榜单归类：</label>
+                        <select id="toplistType" name="toplistType">
+                            <option class="toplist_new" value="音乐新歌榜">音乐新歌榜</option>
+                            <option class="toplist_soar" value="音乐飙升榜">音乐飙升榜</option>
+                            <option class="toplist_original" value="原创音乐榜">原创音乐榜</option>
+                            <option class="toplist_hot" value="音乐热度榜">音乐热度榜</option>
+                        </select>
+                    </div>
+                    <!--上传歌曲类型二级联动设计-->
+                    <div class="songTypeDiv">
+                        <div class="targetTypeDiv">
+                            <label><sup>*</sup>当前类别：</label>
+                            <input class="bigType" name="bigType" type="text" readonly>
+                            <input class="smallType" name="smallType" type="text" readonly>
+                        </div>
+                        <div class="oldTypeDiv">
+                            <label>修改类别：</label>
+                            <select class="province" ng-init="province.id='0'" ng-model="province.id" ng-change="cBox.provinceChange(province.id);city.id='0';" ng-options="id as name for (id,name) in cBox.provinceArr"></select>
+                            <select class="city" ng-init="city.id='0'" ng-model="city.id" ng-change="cBox.cityChange(city.id);" ng-options="id as name for (id,name) in cBox.getCityArr"></select>
+                        </div>
+                    </div>
+                    <!--标签-->
+                    <div class="songLabelDiv">
+                        <label class="changeLabel"><sup>*</sup>修改标签：（至少两个）</label>
+                        <label><input name="label" type="checkbox" value="华语"/>华语</label>
+                        <label><input name="label" type="checkbox" value="欧美"/>欧美</label>
+                        <label><input name="label" type="checkbox" value="治愈"/>治愈</label>
+                        <label><input name="label" type="checkbox" value="韩语"/>韩语</label>
+                        <label><input name="label" type="checkbox" value="粤语"/>粤语</label>
+                        <label><input name="label" type="checkbox" value="翻唱"/>翻唱</label>
+                        <label><input name="label" type="checkbox" value="流行"/>流行</label>
+                        <label><input name="label" type="checkbox" value="摇滚"/>摇滚</label>
+                        <label><input name="label" type="checkbox" value="网络歌曲"/>网络歌曲</label>
+                        <label><input name="label" type="checkbox" value="说唱"/>说唱</label>
+                        <label><input name="label" type="checkbox" value="爵士"/>爵士</label>
+                        <label><input name="label" type="checkbox" value="电子"/>电子</label>
+                        <label><input name="label" type="checkbox" value="清晨"/>清晨</label>
+                        <label><input name="label" type="checkbox" value="浪漫"/>浪漫</label>
+                        <label><input name="label" type="checkbox" value="民谣"/>民谣</label>
+                        <label><input name="label" type="checkbox" value="校园"/>校园</label>
+                        <label><input name="label" type="checkbox" value="影视原声"/>影视原声</label>
+                        <label><input name="label" type="checkbox" value="经典"/>经典</label>
+                    </div>
+                    <div class="aWordDes">
+                        <label><sup>*</sup>一句话描述：</label>
+                        <input class="aWordInput" type="text" name="aWord" placeholder="不超过19个字符" maxlength="19">
+                    </div>
+                    <div class="songDesDiv">
+                        <label>歌曲介绍：</label>
+                        <textarea id="textAreaSongDes" name="songDes" cols="30" rows="10" maxlength="140"></textarea>
+                        <p>您还可以输入<span class="desLimit">140</span>个字</p>
+                    </div>
+                </div> <!-- userBaseMsgLeft of end-->
+                <div class="userBaseMsgRight">
+                    <!--存储当前歌曲Id-->
+                    <input class="songId" type="text" name="songId">
+                    <!--上传歌曲图片-->
+                    <div class="f-cb">
+                        <div class="songImgNatureDiv">
+                            <input class="songImgSave" type="text" name="imgName">
+                            <img class="songImgNature" src="frameImg/default_noPic.png" alt="加载失败">
+                            <span class="changeImgCover"></span>
+                            <label class="uploadSongImg">
+                                <div class="uploadSongBtn">修改歌曲图片</div>
+                                <input class="songImg" type="file" name="imgName" accept="image/jpeg,image/png" onchange="uploadSong(this)">
+                            </label>
+                        </div>
+                        <!--上传歌曲文件MP3-->
+                        <div class="songMp3Div">
+                            <input class="mp3NameHide" type="text" name="mp3Name">
+                            <input class="songMp3Save" type="text" name="mp3File">
+                            <img class="songMp3DivImg" src="frameImg/default_album.jpg" alt="加载失败">
+                            <span class="changeImgCover"></span>
+                            <label class="uploadSongImg">
+                                <div class="uploadMp3Btn">修改MP3格式文件</div>
+                                <input class="songMp3" type="file" name="mp3File" accept="audio/mpeg" onchange="uploadMp3(this)">
+                            </label>
+                        </div>
+                        <!--上传歌词lrc-->
+                        <div class="songLrcDiv">
+                            <input class="lrcNameHide" type="text" name="lrcName">
+                            <input class="songLrcSave" type="text" name="lrcFile">
+                            <img class="songLrcDivImg" src="frameImg/default_album.jpg" alt="加载失败">
+                            <span class="changeImgCover"></span>
+                            <label class="uploadSongImg">
+                                <div class="uploadLrcBtn">修改lrc格式文件</div>
+                                <input class="songLrc" type="file" name="lrcFile" onchange="modifyLrc(this)">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="uploadSongImgPreview f-cb">
+                        <p class="uploadSongImgPreviewTitle">修改图片预览：</p>
+                        <div class="songImgLgSizeDiv">
+                            <img class="songImgLgSize" src="frameImg/default_album.jpg" alt="加载失败">
+                            <p class="songImgLgSizeDes">大尺寸图片（180x180像素）</p>
+                        </div>
+                        <div class="songImgSmSizeDiv">
+                            <img class="songImgSmSize" src="frameImg/default_album.jpg" alt="加载失败">
+                            <p class="songImgSmSizeDes">小尺寸图片（40x40像素）</p>
+                        </div>
+                    </div>
+
+                    <div class="saveSongDiv">
+                        <a class="modifySongConfirm" href="javascript:;">保&nbsp;存&nbsp;修&nbsp;改</a>
+                    </div>
+                </div> <!-- userBaseMsgRight of end-->
+            </form>
+        </div>
+    </div> <!-- uploadSongContentWrap of end -->
+</div>
+<script src="js/modifySong.js"></script>

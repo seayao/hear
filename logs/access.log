@@ -1,0 +1,15 @@
+[2017-06-19 11:06:46.295] [WARN] normal - GET /frameImg/table.png
+[2017-06-19 11:06:46.307] [WARN] normal - GET /frameImg/songxs19.jpg
+[2017-06-19 11:06:46.309] [WARN] normal - GET /frameImg/songxs20.jpg
+[2017-06-19 11:06:46.313] [WARN] normal - GET /frameImg/songxs21.jpg
+[2017-06-19 11:06:46.315] [WARN] normal - GET /frameImg/songxs22.jpg
+[2017-06-19 11:06:46.319] [WARN] normal - GET /frameImg/songxs23.jpg
+[2017-06-19 11:06:46.324] [WARN] normal - GET /frameImg/songxs24.jpg
+[2017-06-19 11:06:57.417] [INFO] normal - GET /frameImg/songl5.jpg
+[2017-06-19 11:06:57.420] [INFO] normal - POST /getTopListByTypeApi
+[2017-06-19 11:06:59.892] [INFO] normal - GET /frameImg/songl2.jpg
+[2017-06-19 11:06:59.917] [INFO] normal - POST /getTopListByTypeApi
+[2017-06-19 11:07:00.915] [INFO] normal - GET /frameImg/songl4.jpg
+[2017-06-19 11:07:00.936] [INFO] normal - POST /getTopListByTypeApi
+[2017-06-19 11:07:02.435] [INFO] normal - GET /frameImg/songl3.jpg
+[2017-06-19 11:07:02.460] [INFO] normal - POST /getTopListByTypeApi

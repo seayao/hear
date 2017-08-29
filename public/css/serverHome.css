@@ -1,0 +1,385 @@
+.nav .one{
+    background:none;
+}
+
+.nav .one a{
+    background:none;
+}
+
+.nav .six{
+    background: url("../frameImg/topbar.png");
+    background-position: left -268px;
+}
+
+.nav .six a{
+    background: url("../frameImg/topbar.png");
+    background-position: right -268px;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+.serverHomeContent{
+    width:980px;
+    min-height:740px;
+    margin: 0 auto;
+    background: #fff;
+    border-left: solid 1px #d3d3d3;
+    border-right: solid 1px #d3d3d3;
+}
+
+.serverHomeWrap{
+    padding: 20px;
+}
+
+.problemCommon{
+    margin-top: 10px;
+}
+
+.problemCommonTop{
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #c20c0c;
+}
+
+.problemCommonTitle{
+    font-size: 20px;
+    font-weight: normal;
+    color: #333;
+    line-height: 40px;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.problemCommonDes{
+    font-size: 12px;
+    color: #666;
+    margin-left: 20px;
+}
+
+.problemCommonLeft{
+    width:30%;
+    min-height: 600px;
+    float: left;
+    background: #f9f9f9;
+}
+
+/*css3 3d折叠菜单导航的实现*/
+.threeDNav {
+    width: 220px;
+    height: 35px;
+    margin: 40px 0 0 30px;
+    position: relative;
+    z-index: 111;
+}
+
+.threeDNav .problemIcon{
+    width: 21px;
+    height: 21px;
+    margin-top: -3px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url("../frameImg/playlist.png") no-repeat;
+    background-position: -24px -50px;
+}
+
+.threeDNav li:hover .problemIcon{
+    background-position:0 -50px;
+}
+
+.threeDNav .navTitle{
+    display: block;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px 5px 0 0;
+    background: #2967c7;
+    position: relative;
+    cursor: pointer;
+    z-index: 111;
+}
+
+.threeDNav .problemList{
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.threeDNav .problemList li{
+    width: 100%;
+    height: 45px;
+    text-indent: 10px;
+    line-height: 45px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #fdfdfd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.threeDNav .problemList li:hover{
+    text-decoration: underline;
+    color: #1093ef;
+    background: #f2f2f2;
+}
+
+.problemCommonRight{
+    width:70%;
+    min-height: 600px;
+    float: right;
+}
+
+.problemLists{
+    width: 550px;
+    margin:30px auto;
+}
+
+.problemLists .problemListsTop{
+    width:550px;
+    height: 35px;
+    background: #f4f4f4;
+    margin-top: 20px;
+    line-height: 35px;
+    font-size: 12px;
+    border-radius: 4px 4px  0 0;
+    border: solid 1px #d3d3d3;
+    color: #333;
+}
+
+.problemListsContent{
+    width:100%;
+    min-height: 100px;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    border: solid 1px #d3d3d3;
+    border-top: none;
+    display: none;
+    text-indent: 2em;
+    position: relative;
+}
+
+.createProTitle{
+    padding-top: 8px;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+.createProDes{
+    min-height: 30px;
+    color:#c20c0c;
+    font-size: 14px;
+}
+
+.problemLists .problemListsTitle{
+    margin-left: 30px;
+}
+
+.problemLists .problemTxt{
+    margin-left: 10px;
+}
+
+.problemLists .problemListsIco{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background:url("../frameImg/problemIco.png");
+    vertical-align: middle;
+}
+
+.problemLists .problemListsDetail{
+    width: 85px;
+    height: 25px;
+    display: inline-block;
+    background: #b80b0b;
+    font-size: 12px;
+    float: right;
+    line-height: 25px;
+    margin: 5px 15px 0 0;
+    border-radius: 4px;
+    color: #fff;
+    text-indent: 20px;
+    cursor: pointer;
+}
+
+.adviceBack{
+    padding-top: 30px;
+    clear: both;
+}
+
+.adviceBackBody{
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.adviceBackBody #problemTable{
+    width: 70%;
+    margin-left: 120px;
+}
+
+.adviceBackBody sup{
+    color: #c10d0c;
+}
+
+.adviceBackBody label{
+    font-size: 16px;
+}
+
+.adviceBackBody input[type="text"]{
+    width: 200px;
+    height: 28px;
+    border-radius: 2px;
+    border: solid 1px #999;
+    font-size: 14px;
+    text-indent: 5px;
+}
+
+.userIdHide,.userNickHide{
+    display: none;
+}
+
+.adviceBackBody .problemType{
+    height: 30px;
+}
+
+.adviceBackBody p{
+    font-size: 12px;
+    color: #666;
+    margin:5px 0 20px 90px;
+}
+
+.adviceBackBody .wordLength{
+    font-weight: 700;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Constantia,Georgia,Arial, Helvetica, sans-serif;
+    color:#e33232;
+}
+
+.adviceBackBody .loadImgTip{
+    font-size: 12px;
+    color: #666;
+    margin-left:5px;
+}
+
+.adviceBackBody .loadImgNum{
+    width: 14px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: italic;
+    font-family: Constantia,Georgia,Arial, Helvetica, sans-serif;
+    color: #e33232;
+}
+
+.adviceBackBody #textAreaContent{
+    width: 380px;
+    height: 180px;
+    padding: 4px;
+    letter-spacing: 1px;
+    margin: -20px 0 0 85px;
+    resize: none;
+    border-radius:2px;
+    font-size: 13px;
+}
+
+.formBtn{
+    margin-top: 20px;
+}
+
+.adviceBackBody .resAdviceBtn,.subAdviceBtn{
+    width: 70px;
+    height: 28px;
+    color: #000;
+    border-radius: 3px;
+    border: none;
+    font-size: 14px;
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+.adviceBackBody .subAdviceBtn{
+    background: #dff0d8;
+    margin-left: 20px;
+}
+
+.adviceBackBody .resAdviceBtn:hover{
+    background: #999;
+    color: #fff;
+}
+
+.adviceBackBody .subAdviceBtn:hover{
+    background: #2e963d;
+    color: #fff;
+}
+
+/*add new*/
+.problemFootBar:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.problemFootBar{
+    width: 100%;
+    height: 30px;
+    margin-top: 8px;
+    background: #f4f4f4;
+    border-top: 1px solid #d3d3d3;
+}
+
+.problemFootBarLeft{
+    float: left;
+    width: 80%;
+    line-height: 30px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.proTypeTxt{
+    color: #333;
+}
+
+.createProTimeTxt,.createUserTxt{
+    color: #333;
+    margin-left: 20px;
+}
+
+.createProTime,.proType,.createUser{
+    color: #666;
+}
+
+.problemFootBarRight{
+    float: left;
+    width: 20%;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.unPraiseIcon{
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+    margin-right: 4px;
+    background: url(../frameImg/icon2.png) no-repeat;
+    background-position: -150px 0;
+    cursor: pointer;
+}
+
+.praiseIcon{
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+    margin-right: 4px;
+    background: url(../frameImg/icon2.png) no-repeat;
+    background-position: -170px 0;
+    cursor: pointer;
+}
+
+

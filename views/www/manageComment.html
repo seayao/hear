@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="css/manageComment.css">
+<div class="redLine">
+</div>
+
+<div class="adminCenterContent">
+    <div class="adminCenterContentWrap">
+        <div class="adminCenterTitle">
+            <h3>管理中心</h3>
+        </div>
+        <ul class="adminSettingList f-cb">
+            <li class="memberManageTitle">
+                <em>会员管理</em>
+            </li>
+            <li class="songManageTitle">
+                <em>歌曲管理</em>
+            </li>
+            <li class="artistManageTitle">
+                <em>歌手管理</em>
+            </li>
+            <li class="commentManageTitle">
+                <em>评论管理</em>
+            </li>
+            <li class="problemrManageTitle">
+                <em>问题管理</em>
+            </li>
+            <li class="backMyHomeTitle">
+                <em>我的主页</em>
+            </li>
+        </ul>
+
+        <div class="memberManageTop f-cb">
+            <h3>评论管理</h3>
+            <h4 class="memberNum" ng-repeat="(key,val) in commentNum">
+                <span>共</span>
+                <span class="memberNumShow">{{val}}</span>
+                <span>条</span>
+            </h4>
+            <div class="memberManageRight f-cb">
+                <i class="memberManageTip" title="提示"></i>
+                <div class="tipContent">
+                    <p>数据可能会有些延迟，刷新页面即可。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="memberList">
+            <ul>
+                <li ng-repeat="v in commentList track by $index">
+                    <div class="memberListHead">
+                        <span class="memberListHeadNum">{{$index + 1}}.</span>
+                    </div>
+                    <div class="memberListMsg">
+                        <span class="memberListAccount" title="被评论类型">{{v.beCommentType}}（类型）</span>
+                        <em>-</em>
+                        <span class="memberListName" title="评论者">{{v.commentorNick}}（评论者）</span>
+                        <em>-</em>
+                        <span class="memberListNick" title="被评论者">{{v.beCommentor}}（被评论者）</span>
+                    </div>
+                    <div class="memberOperation" data-comId="{{v._id}}" data-comType="{{v.beCommentType}}">
+                        <span class="publicBtn modifyCommentBtn" data-beComId="{{v.beCommentId}}">检测</span>
+                        <span class="publicBtn delCommentBtn">删除</span>
+                        <span class="publicBtn commentDetailsBtn">详情</span>
+                        <span class="publicBtn commentOtherBtn">其他</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- upDateContentWrap of end -->
+</div>
+<script src="js/manageComment.js"></script>
